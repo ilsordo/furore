@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="OCaml Labs Group">
+  <title>OCaml Labs Weekly Reports</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="github-pandoc.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">OCaml Labs Weekly Reports</h1>
+<h2 class="author">OCaml Labs Group</h2>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#weekly-notes-for-2017">Weekly notes for 2017</a><ul>
+<li><a href="#week-2">Week 2</a></li>
+<li><a href="#week-1">Week 1</a></li>
+</ul></li>
+<li><a href="#weekly-notes-for-2016">Weekly notes for 2016</a><ul>
+<li><a href="#week-51">Week 51</a></li>
+<li><a href="#week-50">Week 50</a></li>
+<li><a href="#week-49">Week 49</a></li>
+<li><a href="#week-48">Week 48</a></li>
+<li><a href="#week-47">Week 47</a></li>
+<li><a href="#week-46">Week 46</a></li>
+<li><a href="#week-45">Week 45</a></li>
+<li><a href="#week-44">Week 44</a></li>
+<li><a href="#week-43">Week 43</a></li>
+<li><a href="#week-42">Week 42</a></li>
+<li><a href="#week-41">Week 41</a></li>
+<li><a href="#week-40">Week 40</a></li>
+<li><a href="#week-39">Week 39</a></li>
+<li><a href="#week-33">Week 33</a></li>
+<li><a href="#week-32">Week 32</a></li>
+<li><a href="#week-31">Week 31</a></li>
+<li><a href="#week-30">Week 30</a></li>
+<li><a href="#week-29">Week 29</a></li>
+<li><a href="#week-28">Week 28</a></li>
+<li><a href="#week-27">Week 27</a></li>
+<li><a href="#week-26">Week 26</a></li>
+<li><a href="#week-25">Week 25</a></li>
+<li><a href="#week-24">Week 24</a></li>
+<li><a href="#week-23">Week 23</a></li>
+<li><a href="#week-22">Week 22</a></li>
+<li><a href="#week-21">Week 21</a></li>
+<li><a href="#week-20">Week 20</a></li>
+<li><a href="#week-19">Week 19</a></li>
+<li><a href="#week-17">Week 17</a></li>
+<li><a href="#week-16">Week 16</a></li>
+</ul></li>
+</ul>
+</nav>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD These weekly notes are rough scribings of activities that happen on a weekly basis. They are intended to be an internal journal for Lab members rather than something consumed by the outside world. If you have any queries about the contents, please contact Gemma Gordon, KC Sivaramakrishnan or Anil Madhavapeddy. ======= These weekly notes are rough scribings of activities that happen on a weekly basis. They are intended to be an internal journal for Lab members rather than something consumed by the outside world. If you have any queries about the contents, please contact Gemma Gordon, KC Sivaramakrishnan or Anil Madhavapeddy. &gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/master</p>
+<h2 id="weekly-notes-for-2017">Weekly notes for 2017</h2>
+<h3 id="week-2">Week 2</h3>
+<h4 id="kc-sivaramakrishnan">KC Sivaramakrishnan</h4>
+<ul>
+<li>Investigated the issue of slow compile times on 4.04.0. Reported the bug to mantis: https://caml.inria.fr/mantis/view.php?id=7456</li>
+<li>Planning for DaLi research paper. tl;dr is to add language level support for mergeable datatypes. This builds on several pieces of work that has already been done:</li>
+<li><a href="https://github.com/kayceesrk/ezirmin">ezirmin</a></li>
+<li><a href="roscidus.com/blog/blog/2015/04/28/cuekeeper-gitting-things-done-in-the-browser/">Cuekeeper</a></li>
+<li><a href="https://github.com/gprano/diff-datatypes">diff-datatypes</a></li>
+<li>Updated CV and website.</li>
+<li>Updated the timeline :-) http://kcsrk.info/timeline.html</li>
+</ul>
+<h4 id="gabriel-de-perthuis">Gabriel de Perthuis</h4>
+<p><strong>Mirage Storage</strong></p>
+<ul>
+<li>build a free space map from a filesystem scan</li>
+<li>flush support</li>
+<li>upgrade to mirage 3 interfaces</li>
+</ul>
+<h3 id="week-1">Week 1</h3>
+<h4 id="gemma-gordon">Gemma Gordon</h4>
+<p><strong>General</strong> - Catching up post-Christmas MANY EMAILS<br />
+- Exploring using furore for weekly worklogs with a view to everyone adding their weekly logs directly<br />
+- Paperwork and administration for visiting researchers to the lab<br />
+- Working on our 2016 catch up report: https://ocamllabs.github.io/furore/index.html<br />
+- Prepping Oct-Dec short report on activities<br />
+- Helping settle David Allsopp in the lab for his first day<br />
+- Writing up a blog about the MirageOS feedback<br />
+- Working on MirageOS logos</p>
+<p><strong>Projects</strong> - Talked with Fred re Merlin progress:<br />
+- stateless frontend: working on wrapper for Windows<br />
+- logging: working on currently<br />
+- parsing: late Jan, needs to talk with Francois first<br />
+- Talked with Mark Shinwell (JS) about Merlin use at JS and issues they are facing<br />
+- Planning Romain's next project with OCL</p>
+<h4 id="kc-sivaramakrishnan-1">KC Sivaramakrishnan</h4>
+<ul>
+<li>Ezirmin</li>
+<li>Add <code>Sync</code> module that roughly mirrors <code>Irmin.Sync</code>. Discovered that <code>push</code> is broken. This is tracked in the following issues:
+<ul>
+<li>https://github.com/mirage/ocaml-git/issues/139</li>
+<li>https://github.com/mirage/irmin/issues/379</li>
+</ul></li>
+<li>Added support for history</li>
+<li>Adding features to write a blog post</li>
+<li>Write and submit DaLi paper to <a href="https://github.com/gowthamk/snapl">SNAPL 2017</a></li>
+</ul>
+<h4 id="gabriel-de-perthuis-1">Gabriel de Perthuis</h4>
+<p><strong>Mirage Storage</strong></p>
+<ul>
+<li>Start refactoring the way cache items are addressed. This is a precondition for flush support.</li>
+<li>Document many design and implementation decisions.</li>
+</ul>
+<h4 id="takayuki-imada">Takayuki Imada</h4>
+<ul>
+<li>Network performance evaluation</li>
+<li>started preparing for performance bottleneck investigation.
+<ul>
+<li>finished building a QEMU/KVM hypervisor with a tracing feature by ftrace, and confirmed it can work.</li>
+<li>building my MirageOS environment with the profiling support.<br />
+</li>
+</ul></li>
+<li>Tools for network performance measurement</li>
+<li>Finished making them available on the GitHub Website.</li>
+<li>(throughput) https://github.com/TImada/mirage_iperf</li>
+<li>(latency) https://github.com/TImada/mirage_pingpong</li>
+</ul>
+<h4 id="liang-wang">Liang Wang</h4>
+<ul>
+<li>Owl</li>
+<li>Implement the module of sparse matrices.</li>
+<li>Implement the module of sparse n-dimensional array.</li>
+<li>Add the unit tests for Dense.Matrix, Dense.Ndarray, Sparse.Matrix, and Sparse.Ndarray modules using Alcotest.</li>
+<li>Add the performance tests for the aforementioned four modules.</li>
+</ul>
+<h2 id="weekly-notes-for-2016">Weekly notes for 2016</h2>
+<h3 id="week-51">Week 51</h3>
+<h4 id="takayuki-imada-1">Takayuki Imada</h4>
+<ul>
+<li>Network performance evaluation</li>
+<li>Finished it on MirageOS and Linux VMs.</li>
+<li>Observed network throughput on MirageOS VMs is worse than on Linux VMs. We will need to investigate why this happens.</li>
+<li>128-byte buffer size:
+<ul>
+<li>3MB/s on MirageOS-Xen, 24MB/s on MirageOS-virtio</li>
+<li>46MB/s on Linux-Xen, 38MB/s on Linux-virtio</li>
+</ul></li>
+<li>1024-byte buffer size:
+<ul>
+<li>16MB/s on MirageOS-Xen, 38MB/s on MirageOS-virtio</li>
+<li>230MB/s on Linux-Xen, 295MB/s on Linux-virtio</li>
+</ul></li>
+<li>Also preparing for releasing my source codes on the Github.</li>
+<li>this includes only source code sophistication for releasing, and will be finished in several days.</li>
+</ul>
+<h4 id="frédéric-bour">Frédéric Bour</h4>
+<p>I haven't progressed much on merlin this week, all my work was reason-related</p>
+<h3 id="week-50">Week 50</h3>
+<h4 id="takayuki-imada-2">Takayuki Imada</h4>
+<ul>
+<li>Preparing for the network performance evaluation -&gt; Finished automation framework implementation for the network performance evaluation.</li>
+<li>The automation script I implemented worked fine. -&gt; Started building a MirageOS environment on another physical server @ packet.net.</li>
+<li>MirageOS/Solo5: mirage-dev</li>
+<li>OCaml version: 4.03.0, 4.04.0</li>
+<li>Hypervisor: Xen, KVM(virtio) -&gt; But now having a problem in executing MirageOS with OCaml v4.03.0 on Xen, so investigating how to solve it.</li>
+<li>This seems a bug in MirageOS. -&gt; Also started and finished the iperf network performance evaluation on Linux Virtual Machines.</li>
+<li>on the physical server above.</li>
+<li>Observed throughput: 38MB/s(128 bytes buffer length), 290MB/s(1024 bytes buffer length)</li>
+</ul>
+<h4 id="frédéric-bour-1">Frédéric Bour</h4>
+<ul>
+<li>Distributed witnesses, https://github.com/let-def/distwit (with <span class="citation" data-cites="samoht">@samoht</span> )</li>
+<li>Solve the problem of marshalling exceptions / extensible type by externalizing the equality.</li>
+<li>HyperLogLog, https://github.com/let-def/grenier/blob/master/hll/hll.mli</li>
+<li>Cardinality estimation in constant space. I made a p-o-c implementation a while ago, now there is one user.</li>
+<li>I added serializability, improved memory representation and fixed a bug causing small biases in estimations</li>
+<li>Macho support for Owee, https://github.com/let-def/owee, WIP</li>
+<li>Loading Macho would be useful for supporting macOS binaries in spacetime.</li>
+<li>This would also a cheap lwt instrumentation tool for monitoring and backtraces. I discussed with <span class="citation" data-cites="antron">@antron</span>, maybe we will look at providing the necessary hooks in the future.</li>
+<li>OCaml meeting (monday last week, some notes about stuff I want to look at)</li>
+<li>Namespace: Didier Remy worried about specification of build (clumsy, not part of the langage)</li>
+<li>Interested by bytecode/native interoperability (mentioned by <span class="citation" data-cites="dim">@dim</span>, <span class="citation" data-cites="stedolan">@stedolan</span>)</li>
+<li>About release process: too much GPR, not enough testing &amp; code review, quality not satisfying</li>
+<li>Eliom presentation (yesterday) &amp; talk with <span class="citation" data-cites="drup">@drup</span></li>
+<li>Seems feasible to add eliom support to Merlin.</li>
+</ul>
+<h4 id="liang-wang-1">Liang Wang</h4>
+<p>I have been working on the following things.</p>
+<ol type="1">
+<li><p>I received a lot of feedback of Owl via github and emails from different people. Based on the feedback, I decided to restructure the Owl a bit by providing a more general matrix module using GADT. I already finished the initial version of Dense.Matrix module. In the near future, it will replace the current Dense.Real and Dense.Complex to provide matrix support for more types and precisions.</p></li>
+<li><p>I met Huawei people with Jon and presented Owl and Actor (the data processing system) I developed. They showed some interests which is a good sign (maybe:)</p></li>
+<li><p>For Actor, I have been collecting papers and doing literature survey to formulate the idea.</p></li>
+</ol>
+<p>For next week, I will fly back to Helsinki so I cannot attend the meeting any more this year. I will see you guys next year in January :)</p>
+<h3 id="week-49">Week 49</h3>
+<h4 id="qi-li">Qi Li</h4>
+<ul>
+<li><p>talked with mort about the next project/direction to work on, for now, there are two possibilities: about PIH-store, develop a model-based compression engine inside of it, so that the data could take up much less storage space, yet with tolerant divergence from their real values; another one is about developing some temporal logic(together with buffer management) to extend the expressibility of packet capturing of network traffic</p></li>
+<li><p>talked with Magnus about work within MirageOS tcp/ip stack testing, at the moment there are testing about different parts of a protocol (say for TCP, we have tests for options and window management), Magnus is working on more different vnetif backends (to simulate different network traffic failure modes), I think there may be something missing in between, like tests when different parts of a protocol working together as a whole under various scenarios, or a test for layers in the stack working together with different packets traces, there are some parts in test_rfc5961.ml and test_iperf.ml, but I think there should be a easier way to express these and a higher level interface to create packets and traces instead of manually created cstruct(s), I'd like to develop something like `packetdrill', probably together with a test environment and I've already started to look into this.</p></li>
+</ul>
+<h4 id="takayuki-imada-3">Takayuki Imada</h4>
+<ul>
+<li>Preparing for the network performance evaluation</li>
+<li>Implementing an automation framework of the network performance evaluation
+<ul>
+<li>This will be finished in several days</li>
+<li>Took long time to solve how to get logs of the MirageOS console (A logging scheme provided by Libvirt could not work, so I investigated and tried other logging frameworks)</li>
+</ul></li>
+<li>Making a slide deck to introduce my work at OCaml Labs to Hitachi Data systems guys</li>
+<li>90% finished
+<ul>
+<li>I will be able to submit the slide to you for checking next week</li>
+<li>I will also check what kind of checking process in Hitachi for the slide is needed.</li>
+</ul></li>
+</ul>
+<h4 id="olivier-nicole">Olivier Nicole</h4>
+<p><strong>Compiler</strong></p>
+<ul>
+<li>The compiler &quot;without placeholders&quot; (and thus without useless static dependencies) now broadly works, i.e. I was able to bootstrap (necessary because adding an argument to one constructor of <code>Path.t</code> changed the cmi format) and compile <code>re</code> (a regexp library that previously didn't compile because of dependency issues).</li>
+<li>Fixed some tests, including <code>warnings/w53.ml</code> and other easy things. My changes appear to have broken recursive modules again (assertion failed in <code>CamlinternalMod</code>).</li>
+<li>Fixed some tests involving recursives modules, but not all of them, by fixing the <code>init_shape</code> function.</li>
+<li>Changed the lifting symbol to <code>~</code> (which unlike <code>^</code> should be non-breaking) in order to break less Opam packages.</li>
+<li>Fixed various issues and bugs with the new system of coercion. It seems quite robust, all tests are passed (except <code>no-alias-deps/aliases.cmo</code> but that's for a completely different reason, and was expected), and a lot of code from Opam compiles fine.</li>
+<li>Fixed priority of &quot;illegal quoting&quot; errors over phase errors after drup's remarks</li>
+</ul>
+<p><strong>Examples using macros</strong></p>
+<ul>
+<li>I try to make a fork of camlp4 compile again, but I encountered a bug that wasn't caught by the tests.</li>
+<li>A segfault occurs when running static code for the main source file of camlp4. Investigating on the issue.</li>
+<li>Started to look at the Flick network DSL, and its OCaml implementation Motto, and whether it can benefit from compile-time metaprogramming.</li>
+<li>Menhir is a dependency of motto, and doesn't compile because of wrong dependency tree — can be fixed by not translating type extensions into static code</li>
+<li>Talked with Mort about networking examples. It would be nice to be able to optimize a packet stream processor like POF or P4 using staging (maybe trying to use or get inspiration from strymonas).</li>
+</ul>
+<h4 id="liang-wang-2">Liang Wang</h4>
+<ol type="1">
+<li><p>I finished the first version of n-dimensional array in Owl, including some optimisation and the full documentation.</p></li>
+<li><p>I also wrote a tutorial on Ndarray which you can find here: https://github.com/ryanrhymes/owl/wiki/Tutorial:-N-Dimensional-Array</p></li>
+<li><p>I did some initial comparison to numpy and julia, it looks promising at the moment, and I will do more thorough evaluation next week.</p></li>
+<li><p>I also talked to kc and michel and discussed about further optimisations on owl, I will look into the directions they suggested in the following weeks.</p></li>
+</ol>
+<h3 id="week-48">Week 48</h3>
+<h4 id="takayuki-imada-4">Takayuki Imada</h4>
+<ul>
+<li>Preparing for the network performance evaluation</li>
+<li>finished the iperf modification, now iperf can be conducted between independent MirageOS VMs</li>
+<li>finished investigation of performance profiling schemes for MirageOS/Solo5</li>
+<li>tested mirage-trace-viewer and it worked fine</li>
+<li>investigated Xen and QEMU/KVM tracing facilities, and confirmed they can provide what I want to know (I will try them later) https://blog.xenproject.org/2012/09/27/tracing-with-xentrace-and-xenalyze/ http://www.linux-kvm.org/page/Perf_events http://vmsplice.net/~stefan/stefanha-tracing-summit-2014.pdf</li>
+<li>Started implementing an automation framework of the network performance evaluation</li>
+<li>Completed rough implementation design and checking other software required</li>
+<li>I will implement it next week</li>
+</ul>
+<h4 id="olivier-nicole-1">Olivier Nicole</h4>
+<ul>
+<li>Remove &quot;zero&quot; placeholders for other-phase values in the lambda code. This took me most of the week, as I had to phase information to <code>Path.t</code>, but also to <code>module_coercion</code>s. This modification should avoid over-approximating the static dependency tree as is currently the case. Currently, every run-time dependency is a static dependency. Since static dependencies must be compiled before there parent in the tree can be compiled, this limitation would break most OCaml projects. I expect this work to be finished, I'll do the tests later tonight.</li>
+<li>Talked with Leo about linking and side effects. Maybe, at some point, it will be necessary to ban the <code>static</code> keyword, unless the effect system is integrated into OCaml soon enough.</li>
+<li>In addition to switching the quoting library to producing lambda code, it would be good to detect scope extrusion. This would be done by passing <code>CamlinternalQuote.Var.t</code> to macros, instead of the current <code>Longident.t loc</code>.</li>
+<li>Note for later: rename <code>CamlinternalQuote.Ident</code> to <code>CamlinternalQuote.Global</code> and move <code>lfrommacro</code> to <code>Exp</code>.</li>
+</ul>
+<h4 id="liang-wang-3">Liang Wang</h4>
+<p>Sorry for the late email this time, I was travelling on Friday. For the last week, I had been only focusing on the N-dimensional array in Owl.</p>
+<ol type="1">
+<li><p>I implemented the first version of N-dimensional array, atop of which, I also implemented a N-dimensional view module which can pipeline some operations on the array to speed up the performance.</p></li>
+<li><p>I later find a better way to further optimise the performance of ndarray by using blas/lapack library. I am currently rewriting some code for better performance.</p></li>
+</ol>
+<h3 id="week-47">Week 47</h3>
+<h4 id="qi-li-1">Qi Li</h4>
+<p><em>Magnus is interesting in spending a day a week contributing to the MirageOS and DataBox efforts, specifically around the work he has already done on Jitsu, ARM and networking. He will spend Wednesdays in the Lab around the standup time and work with Qi on the new Alpine xen-arm-builder distribution, to get it up to speed. He is also working on mirage-vnetif and testing of the network stack.</em></p>
+<ul>
+<li><p>before Wednesday, run the system prepared for UCN final review to make sure it works, worked out the serial output from cubie so that without a vga screen we could still have a prompt to do the work, made SD card copies</p></li>
+<li><p>from Wednesday on, in Portugal, for the UCN final review, discovered that both the original card and the copy were corrupted because of some last second invalid writes crossing partition boundaries on the card, panicked, put up something mimicking the behaviour of PIH to make sure our partners' demos could still run, since in the schedule, we wouldn't demo anything, it's just our collaborators using our platforms, then the review seemed going well...</p></li>
+</ul>
+<h4 id="takayuki-imada-5">Takayuki Imada</h4>
+<ul>
+<li>Completed building my MirageOS/Solo5 environments in Japan</li>
+<li><p>they are operating perfectly.</p></li>
+<li>Investigating and trying to execute existing network programs on MirageOS</li>
+<li>found arp and iperf implementation, but found out they cannot use with the latest MirageOS branch (mirage-dev) due to rapidly changing MirageOS APIs</li>
+<li>modifying their source codes: arp : modification finished and worked correctly iperf: under modification, network connection and data transfer were OK but a result printing part was wrong</li>
+<li><p>I will move to learning of performance profiling on MirageOS after finishing the iperf modification</p></li>
+</ul>
+<h4 id="liang-wang-4">Liang Wang</h4>
+<ol type="1">
+<li><p>I kept working on the P2P engine, and I implemented a distributed LDA atop of P2P engine in my data processing framework. I spent about two days in debugging it and finally managed to make it work.</p></li>
+<li><p>I had a meeting with Mort to refine our thinking on the data framework and identified a couple of interesting research questions: barrier control, and model consistency.</p></li>
+<li><p>I had a couple of meetings with those who are interested in owl and identified some potential directions: more advanced support for multi-dimensional array, and auto gradient derivation functions. I will focus on these two and try to get them ready by the end of this year.</p></li>
+<li><p>I wrote a separate post for using owl to manipulate matrices, in case you didn’t notice before, here is the link: https://github.com/ryanrhymes/owl/wiki/Manipulate-Matrices-in-Owl</p></li>
+</ol>
+<h3 id="week-46">Week 46</h3>
+<h4 id="qi-li-2">Qi Li</h4>
+<ul>
+<li><p>Finished porting to the Alpine system, now our PIH system is running on Alpine based cubeietruck full time. This involved putting the data persistence service and web interface for the end user into a debian-based domU.</p></li>
+<li><p>Figured out and fixed various bug (well, at least temporarily), mainly about PIH-bridge. This part works like a Network Address Translation device, which is doing traffic relays between clients and data holding unikernels. It will keep using up its own port numbers on its network interfaces if there is no proper &quot;garbage collection&quot; for the port numbers. This bit became a problem when our collaborators started testing there demos against our PIH, where lots of connections would be involved. Indeed, to make it more robust, we have to address this problem. For the time being, each translation rule has its own lifetime(5 min for now), and a queue is maintained in memory to hold these rules, once the number of rules reaches a threshold(30_000 for now), a function will be invoked to clear out all expired rules.</p></li>
+</ul>
+<h4 id="takayuki-imada-6">Takayuki Imada</h4>
+<ul>
+<li>Made a list of functionality in existing networking software and hardware for virtualised environments.</li>
+<li>both Netmap and DPDK have a similar approach (software-based packet switching, userspace packet processing)<br />
+</li>
+<li><p>using SR-IOV VFs is difficult to apply to some situations (for example, combined with DPDK on ARM) So I will conduct performance evaluation of the current implementation to understand which part is a bottleneck</p></li>
+<li>Preparing for the performance evaluation for the coming MirageOS v3 release</li>
+<li>I will be engaged in network related topics.</li>
+<li><p>I have started building a MirageOS/Solo5 testbed (in Japan) to easily move to the actual evaluation in a local environment. I will learn and test Mirage-related operations on the testbed in advance</p></li>
+</ul>
+<h4 id="olivier-nicole-2">Olivier Nicole</h4>
+<p><strong>Monday (2016-11-14)</strong></p>
+<p>Specification of macro closures: the result of translating a macro into lambda code should be:<br />
+* if the target phase is 1: the code of the macro itself;<br />
+* if the target phase is 0: the closure, i.e. a block containing pointers to the cross-stage, phase-0 identifiers used in the macro's body.</p>
+<p>Unrelatedly: discovered a bug in our early form of CSP. This &quot;weak&quot; CSP enabled the programmer to quote non-global identifiers <em>if</em> the quote was &quot;trapped&quot; inside a top-level splice. The current implementation is faulty, as it allows to quote simple identifiers like <code>y</code>, but not compound paths like <code>M.y</code>, e.g. the following does not work:</p>
+<pre><code>  # module M = struct let y = 42 end;;
+  (seq
+    (apply (field 1 (global Toploop!)) &quot;M/1388&quot;
+      (pseudo //toplevel//(1):11-32 (makeblock 0 0)))
+    (makearray[addr]))
+  (apply (field 1 (global Toploop!)) &quot;M/1388&quot;
+    (let (y/1389 =[int] 42)
+      (pseudo //toplevel//(1):11-32 (makeblock 0 y/1389))))
+  module M : sig val y : int end
+  # let x = $(&lt;&lt;M.y&gt;&gt;);;
+  &gt;&gt; Fatal error: No global path for identifier
+  Fatal error: exception Misc.Fatal_error</code></pre>
+<p>Although this early form of CSP should be made redundant by path closures, I note this here for future reference. Improved printing of macros in signatures (<code>macro</code> instead of <code>static val</code>).</p>
+<ul>
+<li><p>Tuesday<br />
+Generation of <code>Lfrommacro</code> identifiers by macro expansion works. Now working to make the type-checker handle <code>Lfrommacro</code> properly. Quite nicely, there is no need to add a constructor to the <code>Path.t</code> type, since <code>Path.Pdot</code> already has an integer field that can be used to represent closure fields. Also, the compiler now shows the results of splicing when the options <code>-dsource</code> or <code>-dparsetree</code> are set.</p></li>
+<li><p>Wednesday<br />
+Note: when modifying <code>CamlinternalQuote</code> it might be necessary to do <code>make   install</code> to have the changes taken into account in <code>Translquote</code>, since <code>Translquote</code> loads <code>^CamlinternalQuote</code> from the standard path unless otherwise specified.<br />
+First examples with path closures working. Deactivated all warnings during compilation of splices.<br />
+Nested macros now work as well.</p></li>
+<li><p>Thursday</p></li>
+</ul>
+<p>Fix quoting of identifier so that globals are spliced as <code>Lglobal</code>. That incidentally fix the issue with compound paths (see Monday). Fix bug with macro numbering that would trigger segfaults when mixing macros and the <code>include</code> keyword. Replace previous warning deactivation with something cleaner. Discovered a bug in the REPL that raises problems with values that exist in two phases (i.e. currently, macros and modules that contain static values). The current mechanism is:<br />
+1. The static lambda is compiled and executed and its result is stored in the global map of the REPL via <code>Toploop.set_value</code><br />
+2. The run-time lambda of the same phrase is compiled and executed and its result is stored in the same place, thus erasing the previous result.<br />
+This is fine for entirely static or entirely run-time values, because they are &quot;associated&quot; an identifier in one phase only. But it makes macros and two-phase modules unusable.<br />
+To fix that, it was sufficient to split the global map by phase (just as what has been done with the symtable).<br />
+I also ran the test suite and after a few minor fixes all tests are successful. There is not yet a proper testing of path closures though. Added a string component to <code>Lfrommacro</code> to print the name of field (along with its position) in a macro closure, for debugging and clarity purposes. The drawback is that it exposes internal names that depend on the implementation and might confuse the user.</p>
+<ul>
+<li>Friday<br />
+Talked with Leo about future plans.<br />
+Banned quoting from outside of macros and splices. As a direct consequence, turned <code>Expr.of_*</code> functions into macros.</li>
+</ul>
+<h4 id="liang-wang-5">Liang Wang</h4>
+<p>For this week, I have been focusing on the development of the data processing framework. I have done the following things:</p>
+<ol type="1">
+<li><p>I implemented a very simple DHT for the framework.</p></li>
+<li><p>I finished the first version of peer-to-peer model parallel engine, on top of which I also implemented a SGD algorithm.</p></li>
+</ol>
+<p>Besides these, not much, the P2P model turned out to be much more complicated than the map reduce and parameter server models. Currently, I am focusing on the barrier control implementation in the framework.</p>
+<h3 id="week-45">Week 45</h3>
+<h4 id="qi-li-3">Qi Li</h4>
+<ol type="1">
+<li><p>Working with sys-admin to set up the PIH service to our external collaborators.</p></li>
+<li><p>Bumping into some bug in the MirageOS TCP/IP stack, only until yesterday did I be able to locate it , will try to fix it and issue a PR on github later</p></li>
+<li><p>Continuing porting some services to Alpine based system. For now, the service accessible to the partners are running on a Debian based system. The binaries for unikernels were easy to deal with, but there are some parts need some dynamically linked libraries, I tried different ways: statically link these libraries; porting these parts together with the libraries; altering the unikernel's implementation to get rid of these parts. For now, I'm settling with the last solution, but I think I would try the <code>porting with libraries</code> later, case the bug in &quot;2&quot; made me think that solution wouldn't work initially. Since I'm not very familiar with the building tools (especially with the linking phase), I think the first solution will cause me more time.</p></li>
+</ol>
+<h4 id="takayuki-imada-7">Takayuki Imada</h4>
+<p>What I have done in the recent weeks is as follows; - Finish reading (and testing codes in) Real World OCaml which will be related to my research topic - Investigated how MirageOS boots up on Xen by reading the MirageOS and mini-os source codes, and understood how OCaml based modules and the mini-os part in MirageOS interact - Started reading papers, documents, and source codes of Netmap and DPDK networking frameworks to consider how I can taking advantages of them in implementing my network acceleration feature on MirageOS</p>
+<h4 id="olivier-nicole-3">Olivier Nicole</h4>
+<ul>
+<li><dl>
+<dt>Monday (2016-11-07)</dt>
+<dd>Laptop still in repair, spent all day trying to get a desktop PC as a replacement. Will use one of the lab shared computers from now on.
+</dd>
+</dl></li>
+<li><dl>
+<dt>Tuesday</dt>
+<dd>Added a new <code>value_kind</code> for macros and made the typechecker tag macros with it.
+</dd>
+</dl></li>
+<li><dl>
+<dt>Wednesday</dt>
+<dd>Stopped keeping track of cross-stage identifiers in the typing environment. Instead, iterate through the typed tree to find them in a expression when needed.<br />
+During the Compiler hacking event at Pembroke, paired with Maxime to work on signatured opens (https://github.com/ocamllabs/compiler-hacking/wiki/Things-to-work-on#signatured-open-command); we're about halfway through it.
+</dd>
+</dl></li>
+<li><dl>
+<dt>Thursday</dt>
+<dd>Add support (parser and typechecker) for macros in signatures.
+</dd>
+</dl></li>
+<li><dl>
+<dt>Friday</dt>
+<dd>Add a closure argument to macros, yet unused.
+</dd>
+</dl></li>
+</ul>
+<h4 id="liang-wang-6">Liang Wang</h4>
+<ol type="1">
+<li><p>I realised the first version of Owl to OPAM with the help of others, also included it in the MirageOS documentation.</p></li>
+<li><p>I started shifting more efforts back to the distributed data processing framework. I rewrote the part of the data parallel and model parallel engine and wrapped them into a separate core module. On top of that, I implemented the one stochastic gradient decedent algorithm using model parallel engine.</p></li>
+<li><p>I have been investigating the Latent Dirichelet Analysis model and identified some potential research questions. Me and mort met the student (Ben Caterall) who will work with on his part III project. He will also contribute to Owl.</p></li>
+<li><p>I also implemented a simple LDA model using Owl, I hope Ben and me together can make a topic module for Owl.</p></li>
+</ol>
+<h3 id="week-44">Week 44</h3>
+<h4 id="qi-li-4">Qi Li</h4>
+<ol type="1">
+<li><p>Measure the performance of PIH-gatekeeper(infrastructure within UCN), mainly the operation latency when serving clients' requests. As there are different branches based on the validity of client certificate and/or the right to access a data holding unikernel, accordingly there are different scenarios where the PIH-gatekeeper need to be measured against.</p></li>
+<li><p>As mort successfully updated the dom0 OS from Debian-based to Alpine earlier last week, I started to port the system to the new platform. The out-of-box SDcard image has insufficient storage space assigned for dom0, I can't install required tools/libraries in it, then I started to rebuild one image which has larger persistent storage space.</p></li>
+</ol>
+<h4 id="liang-wang-7">Liang Wang</h4>
+<ol type="1">
+<li><p>I have optimised the performance of sparse complex matrix module. Many operations are much faster than before now. I think this module is mostly done.</p></li>
+<li><p>I have implemented a module for Fast Fourier Transforms with basic operations. I still need some time to finalise this module next week.</p></li>
+<li><p>I start writing up some documents to prepare for an opam release in the following weeks.</p></li>
+<li><p>I start allocating more time on the distributed data processing framework again this week. The progress on this was slow due to the distraction from Owl.</p></li>
+</ol>
+<h3 id="week-43">Week 43</h3>
+<h4 id="takayuki-imada-8">Takayuki Imada</h4>
+<p>My research topic - Started learning OCaml, and finished installation of OCaml on my laptop. - Completed the chapter 1 of Real World OCaml and now following the chapter 2 - Felt I need to have a flexible mind to understand the OCaml language expression.</p>
+<p>Others - Arrived at Cambridge 16th Oct. - Found my long term flat and I will make a contract with a landload in this weekend. - Still setting up IT services (e-mail address, lab network, printer/scanner).</p>
+<h4 id="liang-wang-8">Liang Wang</h4>
+<ol type="1">
+<li><p>I have implemented complex number support in Owl. The Dense module now have two submodules: Real and Complex which support dense matrices of real number and complex number respectively.</p></li>
+<li><p>I also split the current Sparse module into two parts to support both real and complex sparse matrices. The real number is already supported but the complex number support in Sparse module is still missing.</p></li>
+<li><p>I removed the dependency on Ctypes.Foreign module in Owl and change completely to stub generation as suggested by Yallop. So the interface to GSL is supposed to be faster and type safer.</p></li>
+<li><p>I tested using functor to generalise some matrix operation, it worked fine but caused some performance penalty in certain operations that I am still trying to figure out the reason.</p></li>
+<li><p>I gave a pitch of my kvasir project last night in Petershouse last night, since it entered into Cambridge Enterprise Business Plan competition. However, I didn’t win the first prize in the end but nice experience and received a lot of publicity.</p></li>
+</ol>
+<h3 id="week-42">Week 42</h3>
+<h4 id="olivier-nicole-4">Olivier Nicole</h4>
+<ul>
+<li><dl>
+<dt>Monday (2016-10-24)</dt>
+<dd>Still tracking that bug. The facts are the following: the program segfaults when trying to dereference a <code>code_t*</code> pointer. The value of this pointer has been set by the instruction <code>PUSHGETGLOBAL Pervasives, 48</code>. The fact that this instruction was executed without segfault shows that accessing the field labelled <code>Pervasives</code> (at that moment) is not an issue. What is an issue is the value of field 48. Ok, so the problem is that the slot 41, corresponding to <code>Pervasives</code>, is erased. So an invariant has been violated. I understood what the problem is, it's actually very simple: I've tried to execute bytecode (using <code>reify_bytecode</code>) with a fresh symtable. But that resulted in the erasing of the compiler's global data in <code>Symtable.update_global_table</code>. So it can be stated that: &quot;to execute bytecode directly, the symtable needs to be shared between the executer and the executed&quot;. This bug was introduced by the change I made last Thursday, when I turned an <code>init_static</code> in <code>Runstatic</code> into <code>init</code>. I did that for the sake of bootstrapping, which otherwise would fail with an <code>Undefined global</code> error on a built-in exception.
+</dd>
+</dl></li>
+<li><dl>
+<dt>Tuesday</dt>
+<dd>The bug was fixed, along with a few others (see commits for details), and all the tests are passed again.
+</dd>
+</dl></li>
+<li><dl>
+<dt>Wednesday, Thursday, Friday</dt>
+<dd>Spent some time working on a staged regular expression matcher, to try macros in a &quot;real-world&quot; situation. I simply staged a very simple, higher-order representation of regular expressions with continuations. It allowed for some compile-time optimizations like: <sub>~</sub> # static f = compile @@ (lit &quot;John&quot; +.+ lit &quot;Kevin&quot;) <em>.</em> lit &quot; likes apples&quot;;; val f : (str -&gt; bool) expr = &lt;&lt; fun cs_1 -&gt; (cs_1 = &quot;John likes apples&quot;) || (cs_1 = &quot;Kevin likes apples&quot;) &gt;&gt; # static f = compile @@ maybe (lit &quot;A&quot;) <em>.</em> lit &quot;A&quot; <em>.</em> lit &quot;B&quot;;; val f : (str -&gt; bool) expr = &lt;&lt; fun cs_2 -&gt; (cs_2 = &quot;AB&quot;) || (cs_2 = &quot;AAB&quot;) &gt;&gt; <sub>~</sub>
+</dd>
+</dl></li>
+</ul>
+<p>The performance is unfortunately quite poor, due to the naiveness of the initial, higher-order algorithm. In particular, the code size for concatenated regexp increases exponentially with the number of regexps. But it has had the merit to demonstrate the tractability of macros, since no problem related to the macro system arose during development.</p>
+<h4 id="liang-wang-9">Liang Wang</h4>
+<p>This week I have been working on the Plot module in Owl library by adding more basic plotting functions. Currently the Plot module supports many widely used plots. There are still many minor things in the module can be improved, but I will do that slowly in the future. I also wrote a tutorial on how to use the plot module and sent it to the ocamllabs mailing list.</p>
+<p>Besides the Plot module, I am also focusing on the Stats module because GSL only provides very basic ones and there are many useful statistical functions are missing. I will implement most of them by myself in OCaml since I do not want to introduce too many dependency in the library. So far, I have implemented z-test, t-test, jb-test, chi2-test, and so on. Based on the feedback, it becomes clearer now that Owl will evolve into a numerical library for OCaml and Matrix, Maths, Stats, Regression, and Plot will be the core modules.</p>
+<h3 id="week-41">Week 41</h3>
+<h4 id="olivier-nicole-5">Olivier Nicole</h4>
+<p>: I finished merging branch <code>4.04</code> into <code>macros</code>, but the repo is not functional yet: I get a segfault on <code>utils/clflags.ml</code> when bootstrapping. Strangely, printf-debugging pointed the segfault to happen on a call to <code>open_in_bin</code> inside <code>Bytelink.load_object</code>, although several successful calls have been made to <code>open_in_bin</code> during the execution. This suggests that the global data containing the Pervasives module has been somehow corrupt. * Tuesday<br />
+: A lot of time spent fighting with the built system and trying to find the cause of my bug(s), without success. * Wednesday<br />
+: Since <code>macros</code> was based on <code>trunk</code>, I shouldn't have used <code>merge</code> to rebase it on <code>4.04</code>, since changes from <code>trunk</code> have been introduced on <code>4.04</code>. In order to rebase macros on <code>4.04</code> without having to resolve conflicts on each commit (which would be necessary to keep the commit history), I had to squash all the macro-related commits into one commit, and cherry-pick that commit onto <code>4.04</code>. * Thursday<br />
+: Conflicts solved and <code>.depend</code> files updated. <code>make coreall</code> works but the segfault on <code>open_in_bin</code> is back. What's more, when trying to compile some dummy file with a static printf in it, the compiler segfaults in <code>Symtable.update_global_data</code>, more specifically on the operation: <code>glob.(slot) &lt;- transl_const cst</code> where <code>glob</code> is <code>Meta.global_data ()</code>. I checked, it's not an out-of-bounds segfault. Another segfault I'm currently tracking is on a call to <code>Pervasives.output_string</code> (or <code>output_char</code>, one of the two). * Friday<br />
+: Today, meeting with Mort and Anil to check the progress of macros. I need to start writing down ideas of applications. The runtime segfaults on the following line while executing the instruction APPTERM2: <code>pc = Code_val(accu);</code> Where <code>accu</code> has been set by the previous instruction: <code>PUSHGETGLOBALFIELD Pervasives, 48</code></p>
+<h3 id="week-40">Week 40</h3>
+<h4 id="olivier-nicole-6">Olivier Nicole</h4>
+<ul>
+<li>Monday (2016-10-10)</li>
+</ul>
+<p>Added static modifiers where appropriate in reference files to fix three <code>parsing/</code> tests. More importantly, fixed <code>bytecomp/bytelink.ml</code> so that <code>std_exit.cmo</code> is linked last, which was not the case until then. Number of failed tests fell to 20.</p>
+<pre><code>  Summary:
+    577 tests passed
+      8 tests skipped
+     20 tests failed
+      2 unexpected errors
+    607 tests considered
+  List of failed tests:
+      tests/typing-recmod/t19ok.ml
+      tests/typing-implicit_unpack/implicit_unpack.ml.reference
+      tests/basic-more/testrandom.ml
+      tests/typing-recmod/t18ok.ml
+      tests/no-alias-deps/aliases.ml.reference
+      tests/typing-recmod/t10ok.ml
+      tests/typing-modules/aliases.ml
+      tests/typing-modules-bugs/pr6572_ok.ml
+      tests/ppx-attributes/warning.ml
+      tests/translprim/module_coercion.ml.reference
+      tests/typing-recmod/t22ok.ml
+      tests/no-alias-deps/aliases.cmo.reference
+      tests/typing-gadts/pr6993_bad.ml
+      tests/typing-poly/poly.ml
+      tests/typing-modules-bugs/pr7182_ok.ml
+      tests/typing-recmod/t03ok.ml
+      tests/typing-recmod/t16ok.ml
+      tests/lib-num
+      tests/typing-recmod/t06ok.ml
+      tests/match-exception/match_failure.ml
+  List of unexpected errors:
+      tests/lib-dynlink-bytecode
+      tests/typing-fstclassmod
+  List of skipped tests:
+      tests/lib-dynlink-csharp
+      tests/unwind
+      tests/asmcomp/is_static_flambda
+      tests/asmcomp/unrolling_flambda
+      tests/lib-bigarray-2</code></pre>
+<p>Note: the current linker may load/link object files in a different order from that given on the command line. That should be avoided.</p>
+<ul>
+<li>Tuesday</li>
+</ul>
+<p>Fix the linker to guarantee that object files are linked in the same order as specified on the command line (provided that the command-line arguments are topologically-sorted). Removed 2 errors.</p>
+<pre><code>  Summary:
+    579 tests passed
+      8 tests skipped
+     18 tests failed
+      2 unexpected errors
+    607 tests considered
+  List of failed tests:
+      tests/typing-recmod/t19ok.ml
+      tests/typing-implicit_unpack/implicit_unpack.ml.reference
+      tests/typing-recmod/t18ok.ml
+      tests/no-alias-deps/aliases.ml.reference
+      tests/typing-recmod/t10ok.ml
+      tests/typing-modules/aliases.ml
+      tests/typing-modules-bugs/pr6572_ok.ml
+      tests/ppx-attributes/warning.ml
+      tests/translprim/module_coercion.ml.reference
+      tests/typing-recmod/t22ok.ml
+      tests/no-alias-deps/aliases.cmo.reference
+      tests/typing-gadts/pr6993_bad.ml
+      tests/typing-poly/poly.ml
+      tests/typing-modules-bugs/pr7182_ok.ml
+      tests/typing-recmod/t03ok.ml
+      tests/typing-recmod/t16ok.ml
+      tests/typing-recmod/t06ok.ml
+      tests/match-exception/match_failure.ml
+  List of unexpected errors:
+      tests/lib-dynlink-bytecode
+      tests/typing-fstclassmod
+  List of skipped tests:
+      tests/lib-dynlink-csharp
+      tests/unwind
+      tests/asmcomp/is_static_flambda
+      tests/asmcomp/unrolling_flambda
+      tests/lib-bigarray-2</code></pre>
+<p>Fixed segfaults by lifting &quot;CamlinternalMod&quot; module name in <code>Translmod</code>, when appropriate. Only 6 failures left, even less than after the last testing session!</p>
+<pre><code>  Summary:
+    592 tests passed
+      8 tests skipped
+      6 tests failed
+      1 unexpected errors
+    607 tests considered
+  List of failed tests:
+      tests/no-alias-deps/aliases.ml.reference
+      tests/translprim/module_coercion.ml.reference
+      tests/typing-recmod/t22ok.ml
+      tests/no-alias-deps/aliases.cmo.reference
+      tests/typing-poly/poly.ml
+      tests/match-exception/match_failure.ml
+  List of unexpected errors:
+      tests/lib-dynlink-bytecode
+  List of skipped tests:
+      tests/lib-dynlink-csharp
+      tests/unwind
+      tests/asmcomp/is_static_flambda
+      tests/asmcomp/unrolling_flambda
+      tests/lib-bigarray-2</code></pre>
+<ul>
+<li>Wednesday</li>
+</ul>
+<p>Two other fixes (see commit logs):</p>
+<pre><code>  Summary:
+    594 tests passed
+      8 tests skipped
+      4 tests failed
+      1 unexpected errors
+    607 tests considered
+  List of failed tests:
+      tests/no-alias-deps/aliases.ml.reference
+      tests/typing-recmod/t22ok.ml
+      tests/no-alias-deps/aliases.cmo.reference
+      tests/typing-poly/poly.ml
+  List of unexpected errors:
+      tests/lib-dynlink-bytecode
+  List of skipped tests:
+      tests/lib-dynlink-csharp
+      tests/unwind
+      tests/asmcomp/is_static_flambda
+      tests/asmcomp/unrolling_flambda
+      tests/lib-bigarray-2</code></pre>
+<p>With the help of Leo, I changed the placeholder for classes in static code to make <code>typing-recmod/t22ok.ml</code> work.</p>
+<ul>
+<li>Thursday</li>
+</ul>
+<p>: Managed to fix all the tests (including the unexpected error), see commit logs. Started rebasing on branch <code>4.04</code>.</p>
+<ul>
+<li>Friday</li>
+</ul>
+<p>: Mark Shinwell remarked that in the case of a branch with so many changes on it, doing a rebase is extremely long: conflicts need to be resolved on a per-commit basis, and almost all commits trigger conflicts. So I decided to rather do a merge. The merge is at about 30% progress (building and testing not included).</p>
+<h3 id="week-39">Week 39</h3>
+<h4 id="olivier-nicole-7">Olivier Nicole</h4>
+<ul>
+<li><dl>
+<dt>Monday (2016-10-03)</dt>
+<dd>With the help of Leo White, I realised that <code>Int_base</code> (see prev. worklog) should not be set to 0 in the static code. So I just removed the related condition in <code>Translmod</code>, and this segfault went away. But doing that incurred new dependencies from files such as <code>utils/numbers.ml</code> to stdlib <code>cmm</code> files. I moved all <code>stdlib/*.cmm</code> files to <code>boot/</code> (as was already done with <code>stdlib/*.cmi</code>) and it seems to do the trick for now. Today's issue arose in the following code: <code>(* this introduces a module `T` in scope *)   include Identifiable.Make (struct (* ... *) end)   module Pair = Identifiable.Make (Identifiable.Pair (T) (T))</code> Causing a <code>Bytegen.comp_expr: var T_1712</code> error.
+</dd>
+</dl></li>
+<li><dl>
+<dt>Tuesday</dt>
+<dd>Removing another <code>target_phase</code> condition just made it work. It's quite surprising and I am afraid that something might break if I keep applying fixes that I don't understand, but I'm too lazy to take it seriously right now. But bad news: <code>ocamldoc/odoc_args.ml</code> uses first-class modules in way that makes the current way of translating modules go wrong: <code>module Html = (val  (  match !Odoc_args.current_generator with    None -&gt; (module Odoc_html.Generator : Odoc_html.Html_generator)  | Some (Odoc_gen.Html m) -&gt; m  | _ -&gt;  failwith    &quot;A non-html generator is already set. Cannot install the Todo-list html generator&quot; ) : Odoc_html.Html_generator)   ;;</code> Simply translating module unpacking (<code>Tmod_unpack</code>) fixed that one, but it will probably break in certain cases. Warning: phase not taken into account when typing recursive modules in <code>Typemod</code>. (later note: fixed)
+</dd>
+</dl></li>
+<li><dl>
+<dt>Wednesday</dt>
+<dd>Basic examples with static modules work. And even static functors! How amazing is that! I implemented phase checks for modules, i.e. the compiler raises an error if a module identifier of the wrong phase is used in a functor application or a binding.
+</dd>
+</dl></li>
+<li><dl>
+<dt>Thursday</dt>
+<dd>Today, I removed all the debug messages printed by the compiler and started to write a test suite for macros. For now it only contains very basic checks related to static values, quoting, splicing and static modules. I also removed the <code>Translstatic</code> module, which had become unnecessery, and moved its contents to <code>Translmod</code>. Doing that enabled me to make the REPL compile static modules (prior to that, they were just ignored). To-do list for the next days:
+</dd>
+</dl></li>
+<li>make <code>ocamlopt</code> work again by fixing <code>Translmod.transl_store_implementation</code>.</li>
+<li>run all tests on both compilers to see if anything is broken.</li>
+<li>rebase <code>macros</code> on <code>trunk</code> (ouuuuch) and run the tests again.</li>
+<li><dl>
+<dt>Friday</dt>
+<dd>Remark: one day, I will have to harmonize the behaviour of bytecode and native linker. This is not needed for macros to work, but is necessary to have a consistent user interface between the two compilers. <code>ocamlopt</code> compiles again. Testing time! A bunch of tests failed this time: <code>Summary: 551 tests passed   8 tests skipped  46 tests failed   2 unexpected errors 607 tests considered   List of failed tests:   tests/typing-recmod/t19ok.ml   tests/typing-implicit_unpack/implicit_unpack.ml.reference   tests/parsing/shortcut_ext_attr.ml.reference   tests/lib-format/pr6824.ml   tests/lib-format/tformat.ml   tests/lib-printf/pr6534.ml   tests/lib-printf/tprintf.ml   tests/lib-printf/pr6938.ml   tests/basic-more/testrandom.ml   tests/basic-more/tbuffer.ml   tests/basic-more/opaque_prim.ml   tests/utils/test_strongly_connected_components.ml   tests/typing-recmod/t18ok.ml   tests/basic-more/morematch.ml   tests/no-alias-deps/aliases.ml.reference   tests/typing-recmod/t10ok.ml   tests/lib-scanf   tests/typing-modules/aliases.ml   tests/typing-modules-bugs/pr6572_ok.ml   tests/ppx-attributes/warning.ml   tests/basic-more/tformat.ml   tests/basic-more/if_in_if.ml   tests/lib-threads/torture.ml   tests/translprim/module_coercion.ml.reference   tests/basic-more/pr2719.ml   tests/basic-more/top_level_patterns.ml   tests/typing-recmod/t22ok.ml   tests/no-alias-deps/aliases.cmo.reference   tests/typing-gadts/pr6993_bad.ml   tests/typing-poly/poly.ml   tests/parsing/extensions.ml.reference   tests/parsing/attributes.ml.reference   tests/lib-str/t01.ml   tests/basic-more/sequential_and_or.ml   tests/typing-modules-bugs/pr7182_ok.ml   tests/misc/weaktest.ml   tests/typing-recmod/t03ok.ml   tests/basic-more/function_in_ref.ml   tests/typing-recmod/t16ok.ml   tests/basic-more/bounds.ml   tests/lib-num   tests/utils/edit_distance.ml   tests/basic-more/tprintf.ml   tests/basic-more/pr6216.ml   tests/typing-recmod/t06ok.ml   tests/match-exception/match_failure.ml   List of unexpected errors:   tests/lib-dynlink-bytecode   tests/typing-fstclassmod   List of skipped tests:   tests/lib-dynlink-csharp   tests/unwind   tests/asmcomp/is_static_flambda   tests/asmcomp/unrolling_flambda   tests/lib-bigarray-2</code> In comparison, results on the 5th of July were: <code>Summary:   590 tests passed 8 tests skipped 9 tests failed 1 unexpected errors   608 tests considered   List of failed tests:   tests/typing-recmod/t18ok.ml   tests/typing-recmod/t10ok.ml   tests/typing-modules-bugs/pr6572_ok.ml   tests/ppx-attributes/warning.ml   tests/typing-recmod/t22ok.ml   tests/typing-poly/poly.ml   tests/typing-modules-bugs/pr7182_ok.ml   tests/typing-recmod/t03ok.ml   tests/typing-recmod/t06ok.ml   List of unexpected errors:   tests/typing-fstclassmod   List of skipped tests:   tests/lib-dynlink-csharp   tests/unwind   tests/asmcomp/is_static_flambda   tests/asmcomp/unrolling_flambda   tests/lib-bigarray-2</code> By taking the diff, I can see that no errors fixed themselves, and which ones are new: <code>8a9,22   &gt;     tests/typing-recmod/t19ok.ml   &gt;     tests/typing-gadts/pr7230.ml   &gt;     tests/typing-implicit_unpack/implicit_unpack.ml.reference   &gt;     tests/parsing/shortcut_ext_attr.ml.reference   &gt;     tests/lib-format/pr6824.ml   &gt;     tests/lib-format/tformat.ml   &gt;     tests/lib-printf/pr6534.ml   &gt;     tests/lib-printf/tprintf.ml   &gt;     tests/lib-printf/pr6938.ml   &gt;     tests/basic-more/testrandom.ml   &gt;     tests/basic-more/tbuffer.ml   &gt;     tests/basic-more/opaque_prim.ml   &gt;     tests/utils/test_strongly_connected_components.ml   9a24,25   &gt;     tests/basic-more/morematch.ml   &gt;     tests/no-alias-deps/aliases.ml.reference   10a27,28   &gt;     tests/lib-scanf   &gt;     tests/typing-modules/aliases.ml   12a31,38   &gt;     tests/basic-more/tformat.ml   &gt;     tests/tool-ocaml/t330-compact-2.ml   &gt;     tests/basic-more/if_in_if.ml   &gt;     tests/lib-threads/torture.ml   &gt;     tests/translprim/module_coercion.ml.reference   &gt;     tests/basic-more/pr2719.ml   &gt;     tests/basic-more/top_level_patterns.ml   &gt;     tests/typing-extensions/extensions.ml.reference   13a40,41   &gt;     tests/no-alias-deps/aliases.cmo.reference   &gt;     tests/typing-gadts/pr6993_bad.ml   14a43,47   &gt;     tests/parsing/extensions.ml.reference   &gt;     tests/parsing/attributes.ml.reference   &gt;     tests/lib-str/t01.ml   &gt;     tests/typing-warnings/application.ml.reference   &gt;     tests/basic-more/sequential_and_or.ml   15a49   &gt;     tests/misc/weaktest.ml   16a51,59   &gt;     tests/typing-gadts/pr5906.ml   &gt;     tests/basic-more/function_in_ref.ml   &gt;     tests/typing-recmod/t16ok.ml   &gt;     tests/basic-more/bounds.ml   &gt;     tests/lib-num   &gt;     tests/typing-gadts/pr7269.ml   &gt;     tests/utils/edit_distance.ml   &gt;     tests/basic-more/tprintf.ml   &gt;     tests/basic-more/pr6216.ml   17a61   &gt;     tests/match-exception/match_failure.ml   19a64   &gt;     tests/lib-dynlink-bytecode</code> Several failures seem due to include path problems, causing <code>Unbound modules</code> errors.
+</dd>
+</dl></li>
+</ul>
+<h3 id="week-33">Week 33</h3>
+<h4 id="romain-calascibetta">Romain Calascibetta</h4>
+<ul>
+<li>I continue to work on a prototype of ocaml-git. I just finished the decoder for the IDX file, I will try the implementation next week.</li>
+<li>I continue to document MrMime - Richard showed me some emails when MrMime fails. These emails are wrong and the thing is, if you use MrMime by the best effort way, you can extract all information from the email, so MrMime can parse these email by the hard way - not the simple way.</li>
+</ul>
+<h3 id="week-32">Week 32</h3>
+<h4 id="romain-calascibetta-1">Romain Calascibetta</h4>
+<ul>
+<li>I continue to document MrMime, you can see the documentation at this link: http://oklm-wsh.github.io/MrMime/ (not very exciting)</li>
+<li>I started a new prototype for ocaml-git, the name is sirodepac, you can see the reopository at this link: https://github.com/dinosaure/sirodepac For the sirodepac, the goal is to created a non-blocking encoder/decoder. So, Thomas follows the project and it's works for the moment despite some little bugs.</li>
+</ul>
+<h4 id="ciaran-lawlor">Ciaran Lawlor</h4>
+<p><strong>Monday + Tuesday</strong></p>
+<p>Rewrote the lexer and parser to be able to understand more about the input, i.e. whether it's a positional arg, flag or optional arg etc. This also requires that the parser have access to the commands and their arguments so that required some more rewriting. This information can then be used for both predictions and syntax highlighting. It's also easier to extend. Parsing optional arguments is tricky because it means the next positional value might actually be their value. Quite a few edge cases, and haven't added support for a few widely used conventions like using -- to denote that the next value is a positional value, or using = when specifying values.</p>
+<p><strong>Wednesday</strong></p>
+<p>Working on making predictions better using the additional information. Quite a lot of cases. Just doing the basic ones for now. Flags only need their name predicted. Non flags need their name predicted but can also predict their value. Positional arguments can be predicted based on their index. Not working yet for optional arguments. Also not working for some other edge cases.</p>
+<p><strong>Thursday</strong></p>
+<p>Added syntax highlighting by traversing the raw input and the syntax tree together. Some more work on prediction. Refactoring and separating out modules.</p>
+<h3 id="week-31">Week 31</h3>
+<h4 id="romain-calascibetta-2">Romain Calascibetta</h4>
+<ul>
+<li>I talked with Christophe about the optimization, I have not yet advised Jeremy about the benchmark but I keep this thing when Jeremy will try to optimize Decompress</li>
+<li>I move Decompress to topkg because Anil wanted a Dockerfile inside the project</li>
+<li>Richard retested MrMime and I fixed some bugs and optimized some computations. Now, we compute 180 mails per second and MrMime fails on 500 emails with 815 000 emails! So it's not bad, we will fix the rest with Richard when he comes back</li>
+<li>I fixed a little bug for Qi Li on the Xen librairies</li>
+<li>I continue to document MrMime</li>
+<li>And I looked inside ocaml-git to understand where I need to start but I does not do revelant something for the moment.</li>
+</ul>
+<h4 id="ciaran-lawlor-1">Ciaran Lawlor</h4>
+<p><strong>Wednesday</strong></p>
+<p>Current state of the shell: - Commands work, but I haven't actually added most of the commands. E.g. connecting doesn't actually work as it's asynchronous, so using Lwt throughout is top priority. - Tab completion doesn't really work. It kind of did at one point, but I've changed quite a lot of stuff since then. Should be fairly easy to get working again though. - Parsing the input works mostly fine, handles quotes / strings, allows escaping etc. - Notty interface now works, which means I can continue using Notty, but it isn't perfect.</p>
+<h4 id="enguerrand-decorne">Enguerrand Decorne</h4>
+<ul>
+<li>Worked on the ocaml-tls binding: Fixed a few memory leaks problems. Tried to run spacetime against the binding, to no avail Tried to run landmarks against the binding: not much success too.</li>
+</ul>
+<h3 id="week-30">Week 30</h3>
+<h4 id="joel-jakubovic">Joel Jakubovic</h4>
+<p>Discussed with KC some interesting ideas I've been having related to making GUI programming less painful. Possible direction for Part II research. I need to investigate the existing literature and write up a brief explanation of what I'm looking at. Also, in the context of this summer, need to see if I can integrate it with the work I'm doing at Docker / OCaml Labs. KC suggested working on same as Ciaran: build 9P client, to develop these principles and test them.</p>
+<p>Summary:</p>
+<ul>
+<li>Motivation comes from building games, where the rule is reinventing the GUI wheel every time.</li>
+<li>GUIs are systems of lots of interacting components. Difficult to code and organise.</li>
+<li>Immediately tied up with graphics and layout: naive, ad-hoc solutions based on fixed, pixel coords and sizes commonplace.</li>
+<li>Want graphical systems that automatically adjust to different constraints eg window shape/size.</li>
+<li>iOS uses Cassowary constraint solver... potentially solved problem, but need expertise in linear prog / optimisation to implement...</li>
+<li>The other broad problem area: specifying interaction.</li>
+<li>Java Swing approach: add event listeners to everything. Asynchronous imperative programming: not scalable with complexity.</li>
+<li>Reinventing for Game N: take similar approach. Sick of it</li>
+<li>My ideas: related to DSLs, formal languages, grammars, parsers.</li>
+<li>Fundamental hypothesis: Parser generators convert language specs into parsers - state machines which accept / reject (and, structure) linear sequences of tokens. Usually thought of as text, but my insight is this: the inputs (mouse, keyboard) that the user submits to an interface are a just such a linear sequence; simply in the time dimension. What if: when we write horrible imperative Java Swing ActionListeners, we are actually painstakingly and unwittingly constructing, by hand, the state machine for a parser of the UI's language? And if so, could it be easier to write UIs as formal grammars of some sort, and then automatically generate the parser (application code) from them? Just as you would enlighten a newbie to CS who has not heard of grammars and who writes all their parsing code in an ad-hoc manner. And furthermore - how useful would it be to view ALL programs (of the sort that depends on inputs from the outside world) as parsers - the language-vs-machine view; elaborate on the fact that, when we slog through the imperative state code for Turing machines, we're dually writing parsers for their [recursively enumerable] languages.</li>
+<li>In one sense, a command-line utility that adds numbers together doesn't just do that - rather, it takes a bunch of characters from the command line and spits out more characters, which happen to correspond to numbers in a particular way.</li>
+<li>Final facet: the principle of compositionality and abstraction. Context-free grammars; their benefits and limitations. Embedding semantics / context-sensitivity into grammars. CFGs let you elaborate in a top-down manner.</li>
+</ul>
+<h4 id="romain-calascibetta-3">Romain Calascibetta</h4>
+<ul>
+<li>I just improved (again!) the interface of MrMime:</li>
+<li>So the design of the API is approved by Daniel and I wait a feedback of Richard to know if we will release a new version or not</li>
+<li>After, I did go to docker to meet Thomas and prepare a TODO list for ocaml-git. Now, I have a clear idea to what I need to do for this project.</li>
+</ul>
+<p>Not a big week so, but a good week to clarify some points about MrMime and ocaml-git.</p>
+<h4 id="ciaran-lawlor-2">Ciaran Lawlor</h4>
+<p><strong>Monday</strong> - Rewrote a lot of the code as I was using quite a bit of mutable state. For example, using an array to store the current input. Now storing it as two int lists (ints as characters are unicode), the first representing the input before the cursor (stored in reverse), and the second representing the input after the cursor. Lots of other changes as well. <strong>Tuesday</strong> - Some more rewriting. Code a lot terser and almost no mutability. - Managed to get Notty working with scrolling etc by disabling canonical mode myself then passing the input from stdin into the notty module to filter escape sequences. A bit of a hack but it means I can use notty and have proper scrolling etc, and don't have to redraw everything each time. - Still a few things that are only half working. For example tab completion is kind of there but not actually 'wired up'. <strong>Wednesday</strong> - Not much to log, just starting to get the shell working with ocaml-9p, rather than just the couple of small examples I've been using so far. - I've written the shell to be synchronous at the moment, which won't work well with things like ocaml-9p, so I'm going to change it to use Lwt throughout.</p>
+<h3 id="week-29">Week 29</h3>
+<h4 id="romain-calascibetta-4">Romain Calascibetta</h4>
+<ul>
+<li>I finished fixing some bugs with Decompress, so we have a stable version after many optimization. As I explained, we don't have a big improvement on the performance but Jeremy will take the relay</li>
+<li>After Richard focused me on a performance problem in MrMime, so I fixed the bug. It's a technical point bug I wait Richard to launch an other test</li>
+<li>I started a little library to see any differences between an email before and after decoding/encoding, I think, I will finish this mini-project this week-end - and may be it's a useful project for irmin</li>
+</ul>
+<h4 id="ciaran-lawlor-3">Ciaran Lawlor</h4>
+<p><strong>Monday</strong> - Experimenting with Notty to make the shell interactive, for things like tab completion. - Notty doesn't seem to support applications that aren't full screen terminal when capturing key presses. For example utop allows tab completion while still being scrollable. Notty generally seems to be more for graphics. lambda-term should support this but also has a lot of stuff that I probably don't need. - Notty also doesn't appear to clean up the terminal after ctrl + c, leaves mouse interaction on etc. And ctrl c can't be intercepted. - Actually it does allow capturing scrolling events and mouse position, so maybe I can implement scrolling manually instead, but not ideal.</p>
+<p><strong>Tuesday</strong> - Would be good to handle unterminated input - e.g. if string doesn't have a closing quote or if the line ends in a backslash then go to the next line. Requires some support in the lexer. - Notty assumes unicode throughout so I will too. Supporting unicode by storing input as an int list and using that when lexing and printing back to the terminal. - I'm currently lexing and parsing the entire input on each keystroke, as I need to know the meaning of the input to be able to do prediction. Not really ideal but usually commands are so short that it might not matter. I might have a go at making it more efficient anyway.</p>
+<p><strong>Wednesday</strong> - I spent today trying to figure out a better way of supporting completions by trying to only lex the part of the input that changes and swap out the affected tokens. I got it sort of working but it was buggy and had lots of mutable state so I gave up on it, at least for now.</p>
+<p><strong>Thursday</strong> - Notty will only capture input events when using a single screen (not scrollable) terminal application, so using print doesn't work as it's quickly overwritten when redrawing the screen. This would be fine as I could just return a string and handle printing elsewhere, but as a lot of the stuff with ocaml-9p is asynchronous I might want to print during executing the command to let the user know what's happening. Which means I might have to take another look at Lambda-term. - In terms of supporting completions, I had a look at Cmdliner as it parses the arguments and automatically checks if an arg is a file or an int etc, which would be useful information for prediction. Would be cool to be able to pass the Cmdliner data to this shell and have prediction done automatically, but unfortunately not really possible. - I can add a small amount of stuff to add prediction to an existing program that uses Cmdliner (or something else). Basically just two functions (one for named args and one for positional args) that map a prefix to a list of possibilities.</p>
+<p><strong>Friday</strong> - Got most things working together today, commands now work properly. Still haven't actually got the actual interface working yet though...</p>
+<h4 id="philip-dexter">Philip Dexter</h4>
+<p>Automatic perforation is coming to the point where it could be ready for more users. I have slowly started to focus on providing a good user interface.</p>
+<p>This week I ran my auto perforation tool on two sets of inputs for kmeans with the goal of showing that results from a run of the automatic perforation program can be used to approximate further inputs. That is, running kmeans with the automatic perforator gives you a result on how to best perforate your loops. Using this result with future data sets previously unseen gives you just as good results. For this experiment I trained the perforation using 10 inputs with 100,000 points. I then ran the resulting perforated program on 10 other inputs of 1,000,000 points and achieved very similar results (a 5x speedup with only a 10% loss in accuracy).</p>
+<p>This week I've written a blog post about the troubles with writing generic approximate computing frameworks (found at: http://phfilip.com/the-difficulty-in-a-general-approximate-computing-framework.html)</p>
+<p>This week I've also discussed with KC at lengths about a use-case of approximate computing. The general idea is to add approximate reasoning to programs which work over distributed key-value stores. Programs in this domain are usually already written to handle consistency anomalies. The addition of a dynamic system to track and handle the levels of approximation could be a good fit for my approximate computing work.</p>
+<h4 id="olivier-nicole-8">Olivier Nicole</h4>
+<ul>
+<li>Macro support has been implemented in <code>ocamlc.opt</code> (bytecode compiler running on the native back-end), after various bug corrections. The execution of macros is as follows:<br />
+</li>
+</ul>
+<ol type="1">
+<li>static code is compiled to bytecode and written to a temporary <code>.cmm</code> file<br />
+</li>
+<li>that <code>.cmm</code> file is linked with its dependencies to make a temporary bytecode executable<br />
+</li>
+<li>using <code>Sys.command</code>, <code>ocamlrun</code> is called on that file. The executable runs and writes the top-level splices to the file passed as a command-line argument.<br />
+</li>
+<li>The untyped parse trees are unmarshalled and spliced into the run-time code.</li>
+</ol>
+<ul>
+<li>I pushed further the idea of HTML templates using the Markup.ml library. An example of a code that can be run (and that includes run-time strings in the template) is:</li>
+</ul>
+<pre><code>open Markup
+open Htmltemplate
+let par =
+  Printf.printf &quot;Please enter a string: &quot;;
+  read_line ()
+let () =
+  $(template [Lit {|
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Some page&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;Some page&lt;/h1&gt;
+        &lt;p&gt;|}; Var &lt;&lt;par&gt;&gt;; Lit {|&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  |} ])
+    |&gt; of_list |&gt; pretty_print |&gt; write_html |&gt; to_string
+    |&gt; print_endline</code></pre>
+<p>The HTML tree is constructed statically, entailing no parsing costs at run-time. The next step is to convert the Markup.ml tree to a TyXML tree to have the typechecker enforce the validity of the HTML tree.</p>
+<h3 id="week-28">Week 28</h3>
+<h4 id="joel-jakubovic-1">Joel Jakubovic</h4>
+<p><strong>Monday</strong></p>
+<p>Setting up Angstrom: I follow the readme instructions, ignoring the initial opam install as the package is not yet released.</p>
+<p><code>opam pin add -n angstrom .   opam install --deps-only angstrom</code></p>
+<p>Which goes fine.</p>
+<p>I want to use vim to explore the source but it complains that it doesn't have alcotest, so I fix that:</p>
+<pre><code> opam install alcotest
+  [...]
+  Building fmt.0.8.0:
+  ocaml pkg/pkg.ml build --pinned false --with-base-unix true --with-cmdliner true
+  Installing fmt.0.8.0.
+  [ERROR] &#39;pinned&#39; has type bool, but a env element of type string was expected`</code></pre>
+<p>Messing around with versions settles on alcotest.0.4.1 as one that works. I run the config and make commands without incident.</p>
+<p>Spent the rest of the day surveying Angstrom, OCaml internals and practising more Vim.</p>
+<p><strong>Tuesday</strong></p>
+<p>Wrote simple test parser for balanced parentheses using Angstrom. Went surprisingly smoothly - my previous experimentation with parser combinators and monads earlier in the year has clearly paid off.</p>
+<p>Wrote initial version of ANSIparse - first test results in out-of-memory from infinite loop somewhere. !!</p>
+<p>Rewrote the grammar and the code, still need to rewrite testing code and do the tests.</p>
+<p><strong>Wednesday</strong></p>
+<p>Continued rewrite a few times. Became apparent during testing that I had misread the format codes and fixed that. Got a working parser from string -&gt; (style list * string) list, eg</p>
+<pre><code>`&quot;Hello, \x1b[1mBrave, \x1b[4;31mNew \x1b[0mWorld!&quot;`
+
+to
+
+`[ ( []                    , &quot;Hello, &quot; );
+  ( [Bold]                , &quot;Brave, &quot; );
+  ( [Underline; Fore Red] , &quot;New &quot;    );
+  ( [Reset]               , &quot;World!&quot;  ); ]`</code></pre>
+<p>Now I need to work on the structuring, i.e. converting to HTML. There is already implicit structure; (styles, str) :: rest applies styles in order to str AND, implicitly, rest. However, the presence of Reset turns things off. I wonder how useful it would be to try and extract some tree structure from this data by e.g. matching styles and Resets.</p>
+<p><strong>Thursday</strong></p>
+<p>Today, worked on making the parser incremental, in that it works a line at a time given its intended use. Ran into some more unpleasant infinite-loop bugs; one of which was of the form</p>
+<pre><code>`Items --&gt; Item*
+Item --&gt; Escape | Text
+Text --&gt; char*`</code></pre>
+<p>So we can derive &quot;HELLO&quot; as</p>
+<pre><code>Items --&gt; Item* --&gt; Text* --&gt; Text --&gt; &quot;HELLO&quot;, or
+Items --&gt; Item* --&gt; Text* --&gt; Text Text* --&gt; &quot;HELLO&quot; &quot;&quot;, or &quot;HELLO&quot; &quot;&quot; &quot;&quot;, etc... and never finishing</code></pre>
+<p>So I had to add lookahead whereby the parser for Text fails if it will read the empty string (because it's at the end of input).</p>
+<p><strong>Friday</strong></p>
+<p>Split into concrete (text) and abstract (tree) modules for later use. Had a look at TyXml.</p>
+<h4 id="romain-calascibetta-5">Romain Calascibetta</h4>
+<ul>
+<li>I push my big change to MrMime, so Richard launched a test with ~18 000 emails and all emails are ok (we catch no error).</li>
+<li>We find a performance problem (with the multipart and the quoted-printable encoding) but it's a specific problem (so when I have a time, I will fix this problem)</li>
+<li>But, overall, MrMime is more faster (it's the result of improvement of internal buffer)</li>
+<li>After, I worked on Decompress and I defunctorized the project, I optimized the translation between op-code and character and I avoided some closures allocations, but, with all this point, with Jeremy, we can't notice any imrpovement :disappointed:</li>
+<li>So, I will try a deforestation of Decompress and we will see if we have a good result</li>
+<li>For the hackaton, I worked on Decompress, but, as I said, no big change and just some experimentals modifications.</li>
+<li>For the next week, I will start to fix some bug in ocaml-git as Richard advised me. Voilà!</li>
+</ul>
+<h4 id="ciaran-lawlor-4">Ciaran Lawlor</h4>
+<p><strong>Monday</strong></p>
+<p>IOCaml on 4.03 - Requires ctyptes. ctypes fails due to requiring libffi. There is a message about needing to brew install libffi but I missed it at first. Installed after that. - Forked and cloned iocaml, followed wiki post on iocaml github to create kernelspec for jupyter: <code>{   &quot;display_name&quot;: &quot;OCaml&quot;,   &quot;language&quot;: &quot;ocaml&quot;,   &quot;argv&quot;: [     &quot;&lt;full path to iocaml&gt;/iocaml.top&quot;,     &quot;-object-info&quot;,     &quot;-completion&quot;,     &quot;-connection-file&quot;,     &quot;{connection_file}&quot;   ]   }</code><br />
+Had to use the full path to get it to work.<br />
+Then run &quot;jupyter kernelspec install --name iocaml-kernel <code>pwd</code>&quot; inside that directory.<br />
+And run<br />
+<code>DYLD_LIBRARY_PATH= pwd :$DYLD_LIBRARY_PATH &amp;&amp; eval opam config env &amp;&amp; jupyter notebook --Session.key= --notebook-dir=notebooks</code><br />
+to get jupyter running (again inside the iocaml directory). - Actually just <code>jupyter notebook --Session.key=</code> seems to work fine? - Hydrogen connects directly to the kernels without going through Jupyter (even though it uses jupyter for the kernelspecs). In atom, trying to use Hydrogen with ocaml code causes it to hang. Running just <code>jupyter notebook without --Session.key=</code> causes the server to repeatedly connect and disconnect to the kernel, so this is probably the issue.</p>
+<p><strong>Tuesday</strong></p>
+<p>IOCaml<br />
+- Used 'apm develop hydrogen' to clone hydrogen as a development plugin, so I can modify it. To use my version I have to start atom with atom --dev. - Trying to figure out where exactly in Hydrogen the key stuff is set. Adding lots of console.log statements. - The connection to a kernel is created in kernel.coffee, which uses the config passed in by kernel-manager.coffee. - KernelManager either generates the config or loads it from ./hydrogen/connection.json in the atom project directory. So you can set key: &quot;&quot; and signature_scheme: &quot;&quot; in the json file, but then every option must be set. This means ports aren't found automatically etc, they must be set manually. * For now, I'm just hardcoding in the key and scheme into kernel.coffee. - Trying to do more with iocaml. Need to #require various things, but #use &quot;topfind&quot; doesn't work. That can be fixed by adding a .iocamlinit file to ~, starting it with</p>
+<pre><code>  `let () =
+    try Topdirs.dir_directory (Sys.getenv &quot;OCAML_TOPLEVEL_PATH&quot;)
+    with Not_found -&gt; ()
+  ;;
+  #use &quot;topfind&quot;;;
+  #thread;;
+  #require &quot;iocaml-kernel.notebook&quot;;;</code></pre>
+<ul>
+<li>The actual ocamlinit doesn't need the above to come before adding other things like #use &quot;topfind&quot;. Shouldn't IOCaml load the toplevel path itself? (Some of Monday and Tuesday is summarised in a gist on github)</li>
+</ul>
+<p><strong>Wednesday</strong><br />
+- Trying to figure out how iocaml displays data but I can't figure it out. There's something about adjustable type definitions. - Trying to figure out how hmac stuff works in zmq, but I don't think I'm going to get anywhere. IOCaml is difficult to figure out. Sockets are opened in sockets.ml, messages are sent and received though message.ml only? - Following datakit quick start. Managed to get the basics working. - Trying to get ocaml 9p working, currently a dependency bug. - Can't connect to the docker container yet, trying to figure out.</p>
+<p><strong>Thursday</strong></p>
+<p>Datakit<br />
+- I can run it in docker but I can't actually connect to it. Trying to connect ocaml-9p just eventually results in a timeout. - Got it connecting, had to expose the port to the host using -p 5640:5640. (Most of Thursday was spent reading about docker networking or looking at datakit or ocaml-9p, so not much to log.)</p>
+<p><strong>Friday</strong></p>
+<p>Shell for ocaml-9p or datakit<br />
+- Writing a quick lexer and parser for the commands so that things like strings and ids are actually handled properly. - Works pretty well, quite resilient. Parses input into an AST of commands with their arguments. Also handles strings properly, plus relatively easy to extend. - I'm writing this in such a way that tab completion should be fairly easy to add. - To interact with Datakit I will need to install it properly rather than through docker so I can use it in my program. But currently it won't make - getting error during linking, undefined symbols for x86_64. - Experimenting with Notty to make the shell interactive, for things like tab completion. - Notty doesn't seem to support applications that aren't full screen terminal when capturing key presses. For example utop allows tab completion while still being scrollable. Notty generally seems to be more for graphics. lambda-term should support this but looks more low level and depends on Camomile. - Notty also doesn't appear to clean up the terminal after ctrl + c, leaves mouse interaction on etc. And ctrl c can't be intercepted.</p>
+<h4 id="philip-dexter-1">Philip Dexter</h4>
+<p>This week I split my time under two projects: the continuing of my auto perforator and the datakit project.</p>
+<p>The auto perforator is coming along very nicely. There is now a hill climbing algorithm built in which will explore the perforation state space. I have the system working under 3 domains: swaptions, ray tracer, and kmeans. I will give a talk about the system next Tuesday.</p>
+<p>The datakit project is under KC's guidance. The idea is to use datakit to power a distributed key-value store. The implementation would be a domain for testing systems which adapt to byzantine errors by changing the strength of their reads into the database.</p>
+<h4 id="olivier-nicole-9">Olivier Nicole</h4>
+<ul>
+<li>Automatic loading implemented in the bytecode linker, both at compile-time and for linking of runtime code. Automatic here means that the needed .cmm, .cmo and .cma file are automatically searched for in the include path. It's mainly for convenience reasons now, if it is too big a change it can be suppressed later.</li>
+<li><code>ocamlc.opt</code> should work very soon, I just need to make phase-1 built-in exceptions work.</li>
+<li>I experimented a bit, trying to use macros with the Markup.ml library (with HTML templates in mind). The very simple following code runs and prints &quot;
+<p>
+lol
+</p>
+&quot;:</li>
+</ul>
+<pre><code>static identity str =
+  let open ^Markup in
+  let open ^Pervasives in
+  let res =
+    (string str |&gt; parse_html |&gt; signals |&gt; write_html |&gt; to_string) in
+  Expr.of_string res
+
+let () = print_endline $(identity &quot;&lt;p&gt;lol&quot;)</code></pre>
+<p>I will try writing more useful macros ASAP.</p>
+<h3 id="week-27">Week 27</h3>
+<h4 id="joel-jakubovic-2">Joel Jakubovic</h4>
+<p><strong>Tuesday</strong></p>
+<p>Tried installing OPAM and OCaml etc on Windows:</p>
+<p>Follow the instructions on https://github.com/protz/ocaml-installer/wiki, up to the final Sanity Check <code>Env var OCAMLLIB</code> exists, so I &quot;clean it up&quot; - removing it, I assume, from my environment. However I can only do so for my current cmd session using SET, and it doesn't show up in systemwide environment variables so I assume it must be part of my user account's environment. Unfortunately I cannot change or access those; &quot;edit environment variables for your account&quot; shows no dialog, nothing (this has been a problem on my machine for a while, but I've never needed the feature till now). So I decide to unset OCAMLLIB in my Cygwin terminal, as it will at least persist for that session. I get to running opam install depext-cygwinports, but I get errors and unfortunately the others are not able to fix.</p>
+<p>Later I open Cygwin terminal again. I forget to source .bashrc and run opam install depext-cygwinports and to my surprise it works. I then opam install zarith batteries stdint etc. and it also works, although I have to use the &quot;fake install&quot; steps in the Troubleshooting section. I then look at https://github.com/realworldocaml/book/wiki/Installation-Instructions and opam install core utop, but I get: <code>[ERROR] core is not available because your system doesn't comply with os != &quot;win32&quot; &amp; ocaml-version = &quot;4.02.3&quot;</code></p>
+<p>I also read at the beginning of the article that Core is unsupported on Windows. So maybe I will have to go through the hassle of installing an Ubuntu VM after all, since my existing one is at home on my external hard drive.</p>
+<p>opam install'd core utop on Ubuntu. Initially had some issues with an older version but fixed them.</p>
+<p><strong>Wednesday</strong></p>
+<p>Begin by installing the next list of packages. During the process I get one</p>
+<p><code>Building conf-zlib.1:    pkg-config zlib  [ERROR] The compilation of conf-zlib.1 failed</code></p>
+<p>I later end up with detailed error descriptions (as well as one for cohttp) giving &quot;Out of space&quot; errors - I'd given it the default size of 8GB, and I'd used a fixed-size virtual disk so it can't just be resized!</p>
+<p>After wasting time grappling with VirtualBox to accept my new 512GB dynamic vdi, I now need to expand the partition or something. But I know nothing about it, and it involves boot-level munging of irreversible operations and I am seriously not interested in reinstalling the VM along with all the OCaml/OPAM stuff that took absolutely ages yesterday (and will probably take even longer, given my new VDI is dynamic). Instead I resolve to see what I can do in OCaml without zlib or cohttp installed in OPAM.</p>
+<p>Not a great deal, it seems. For when I type in utop to my terminal (now using the old 8GB disk) all I get is Fatal error: unknown C primitive <code>unix_has_symlink</code></p>
+<p>I would be surprised if this had anything to do with the lack of zlib or cohttp, since they were opam packages presumably for development. I google a bit, find similar looking errors, and do eval <code>opam config env</code>, try again and this time I'm finally in.</p>
+<p>And it only took two whole days!</p>
+<p>Later, we get to Docker, where I continue getting through Real World OCaml and receive a licence key for Windows 10 Professional - thanks Dr. Titmus.</p>
+<p><strong>Thursday</strong></p>
+<p>I begin the day by attempting the Windows 10 Pro upgrade three times in a row, using the official channels. Frustratingly, each time, after the restart, it appears as if nothing has happened. I'm still on Home. Maybe it would be better after all to just get a computer at Docker and the CL.</p>
+<p>I talk to Graham Titmus and download the Win10 Multiple Editions ISO from DreamSpark. It tells me I'll need to burn it to a boot disk, so I go back to Titmus' office to ask - he isn't there, so after a while I go back and e-mail him, continuing with R.W.O in the meantime.</p>
+<p>The time comes to run corebuild on my VM. I do so, and I get the &quot;out of memory&quot; error, because I'm still using the 8GB disk. I thought I could get away with it.</p>
+<p>Titmus arrives and gives me a disk. I burn the ISO to the disk. I go through the setup process and, after many loooong waits eventually come to the final setup screen. &quot;You have chosen to: install Windows Home&quot; nope, I never chose anything like that, or even had any options. Google told me that the Multiple Editions version contained both Home AND Professional - and that it would ask me which one I would like.</p>
+<p><code>C:\WINDOWS\system32&gt;dism /Get-WimInfo /WimFile:D:\sources\install.wim   Deployment Image Servicing and Management tool   Version: 10.0.10586.0</code></p>
+<p><code>Details for image : D:\sources\install.wim</code></p>
+<p><code>Index : 1   Name : Windows 10 Pro   Description : Windows 10 Pro   Size : 14,516,205,352 bytes</code></p>
+<p><code>Index : 2   Name : Windows 10 Home   Description : Windows 10 Home   Size : 14,431,121,717 bytes</code></p>
+<p>The operation completed successfully.</p>
+<p>So it does contain Pro. Why didn't it acknowledge this? Perhaps I need to boot from the disc instead.</p>
+<p>I can't seem to boot from it. Instead I enter in the new code to System &gt; Activation. This time it takes a LOT longer ... but ultimately ends up just like the other attempts.</p>
+<p>I give up. I'll use my VM.</p>
+<p>Increased primary partition, shouldn't have any (of the same) problems now.</p>
+<p><code>$ eval</code>opam config env<code>$ opam install -y async yojson core_extended core_bench cohttp async_graphics cryptokit menhir merlin</code></p>
+<p><code>...</code></p>
+<pre><code> `#=== ERROR while installing conf-zlib.1 =======================================#
+  # opam-version 1.2.0
+  # os           linux
+  # command      pkg-config zlib
+  # path         /home/jdj27/.opam/4.03.0/build/conf-zlib.1
+  # compiler     4.03.0
+  # exit-code    1
+  # env-file     /home/jdj27/.opam/4.03.0/build/conf-zlib.1/conf-zlib-5816-d2c37b.env
+  # stdout-file  /home/jdj27/.opam/4.03.0/build/conf-zlib.1/conf-zlib-5816-d2c37b.out
+  # stderr-file  /home/jdj27/.opam/4.03.0/build/conf-zlib.1/conf-zlib-5816-d2c37b.err`</code></pre>
+<p>Googled, performed some magic, got it to work.</p>
+<p>Continuing with RWO, this time much faster and more productively since I now have something to type into.</p>
+<p><strong>Friday</strong></p>
+<p>Just did RWO today, finally, was nice - got through several chapters, now up to chapter 8 (Imperative programming).</p>
+<h4 id="romain-calascibetta-6">Romain Calascibetta</h4>
+<ul>
+<li>I defunctorized Decompress, so the API is more simply and I won 2 Mb/s for the inflate but I losted 2 Mb/s for the deflate</li>
+<li>Now Decompress uses memcpy function instead memmove (standard function used by OCaml), it's a technical aspect but a big technical point about the portability on Decompress (on Xen architecture specifically). So, I talk about that with Jeremy and we think we have no problem and may be it's a good change to improve the performance of Decompress</li>
+<li>I used a project from LexiFy, landmarks (Thomas advised me to use that), and Spacetime from Mark to find the bottleneck in Decompress and I found this Friday. I have an idea to optimize Decompress (again and again) but I think, we found the the big problem about the performance in Decompress (and it converges with Jeremy's idea)</li>
+</ul>
+<h4 id="ciaran-lawlor-5">Ciaran Lawlor</h4>
+<p><strong>Monday</strong><br />
+- Background reading. Refreshing how git works in more detail. Looking at irmin, datakit. - Reading articles from Thomas Leonard's blog.</p>
+<p><strong>Tuesday</strong></p>
+<p>Setting up opam / ocaml. - Installing opam using brew. Following RWO setup guide. Installing core, utop etc via opam. Configuring utop to #require core packages. - Setting up vim. Installing merlin and creating .merlin file. Installing ocp-indent-vim. Sorting out .vimrc. Installed syntastic, setup to use merlin.</p>
+<p>Docker tutorial - Installed docker. Followed the basic docker tutorial - the basics of images, containers etc.</p>
+<p>OCaml - Reading some more of Thomas Leonard's articles. Reading RWO.</p>
+<p><strong>Wednesday</strong><br />
+- Finished reading most of part 1 of RWO. Read some of the later chapters as well, but part 1 covers most of the language features.</p>
+<p>Dependencies and utop - utop doesn't load the init file (.ocamlinit) when loading an ml file from the command line. Using #use loads the init file. - I expected utop to work with a file that used other modules in the same directory, but it doesn't. It is possible by building first using ocamlbuild and then using #load_rec on the cmo file. Useful for interacting / quickly testing a bit of code split across multiple files.</p>
+<p>Lexing and Parsing - Read the chapter about parsing in RWO and managed to get the very basics working.</p>
+<p><strong>Thursday</strong></p>
+<p>IOCaml and Hydrogen - Setting up Hydrogen for Atom as explained on the website. Working with python (although requires running atom via terminal), need to get working with IOCaml. Installed OCaml support for atom using apm install language-ocaml. - Doesn't work on 4.03 for some reason, requires &lt; 4.03.0. Switching to 4.02.3. (Later on - after updating opam I can install on 4.03) - Trying to opam install IOCaml fails as it depends on gmp, which it isn't installing automatically. Installed manually with homebrew. - Still failing as ctypes won't compile - The compilation of ctypes failed at &quot;make XEN=disable libffi.config&quot;. - Installed libffi manually using brew. opam install IOCaml now works. - IOCaml doesn't work. Jupyter says 0 active kernels. Hydrogen works with python even if jupyter notebook isn't running, so I guess it's using its own instance. IOCaml works by itself from the command line, just not sure how to link with Jupyter or Hydrogen. - Jupyter doesn't have a kernel spec for IOCaml. I have no idea how to add one.</p>
+<ul>
+<li>There are pages on the IOCaml wiki for adding the kernel spec, but I can't figure it out.</li>
+</ul>
+<p>Lexing and Parsing<br />
+- Messing around with ocamllex and Menhir in the afternoon, trying to create a simple template language. - Decided to try sedlex instead as it supports unicode. - sedlex won't install for 4.03. Latest version does work on 4.03 but opam isn't seeing it. Trying to figure out how to refresh the repo. - Can't find much (Later on - did I actually try opam update?). The latest version listed by opam is 1.99.2, but the opam repository online gives 1.99.3. - Adding PKG sedlex to my .merlin file causes 'Error while running external preprocessor'. Can't figure out what exactly is the problem for now, something to do with the fact sedlex uses ppx?</p>
+<p>Sedlex<br />
+- Just trying to lex for now, the template language consists of text and logic parts which need to be lexed differently, so the lexer needs some contextual infomation. - Managed to get lexing working pretty well for the template language, by using some mutable state. Don't think there is any other way really.</p>
+<p><strong>Friday</strong></p>
+<p>Sedlex<br />
+- I'm currently testing my lexer by building, then going into utop and doing</p>
+<pre><code>    #directory &quot;_build&quot;;;
+    #load_rec &quot;_build/lexer.cmo&quot;;;</code></pre>
+<p>This lets me quickly test it with different strings without having to rebuild, and lets me see the returned list of tokens.</p>
+<ul>
+<li><p>Sedlex doesn't let you define regexps using <code>let lid =   let lid1 = [%sedlex.regexp? R] in   [%sedlex.regexp lid1]   as they will be unbound. Currently doing: let lid1 = [%sedlex.regexp? R] let lid = [%sedlex.regexp lid1]</code> They have their own scope anyway.</p></li>
+<li><p>Does defining a function within a function that is called often have a significant performance penalty to defining it outside the function?</p></li>
+</ul>
+<p><strong>Weekend</strong> - Messed around with lexing a bit more, got parsing working as well using Menhir. Requires using MenhirLib.Convert API as Menhir is made to work with ocamllex.</p>
+<h4 id="philip-dexter-2">Philip Dexter</h4>
+<p>This week I have generalized the perforation system to the point where I was able to take an off-the-shelf ocaml implementation of kmeans clustering and run it through the perforation system. The program was able to produce nice, readable results for different configurations [attached image]. However when more than 2 loops are perforated, the data starts becoming very hard to visualize. The system is really smooth but it's still lacking: I had to turn one use of List.iter into a for loop. However, I have created a plan to perforate recursive functions which will allow the system to work on programs which don't use for loops.</p>
+<p>This week I also worked with the reagents library for ocaml-multicore. In the beginning of the week I parallelized an existing ray tracer written in OCaml. (The ray tracer also is a good candidate for perforation.) Further, KC and I have discussed working on a lock-free hash table implementation to use in the Hack type checker (written in OCaml). Currently hack use a C hash table implementation strapped on the to OCaml code. Writing a competitive implementation in OCaml would be a great way to show of ocaml-multicore.</p>
+<h4 id="olivier-nicole-10">Olivier Nicole</h4>
+<ul>
+<li>Testing of rebased branch and subsequent corrections finished. The remaining test failures are (all but one) due to lack of support for recursive modules, except for an unexpectedly long type error, probably due to the twofold compilation.</li>
+<li>Alain Frisch's native toplevel (<code>ocamlnat</code>) now compiles again, but has no macro support.</li>
+<li>Macro support was added to <code>ocamlopt</code> (careful, not <code>ocamlc.opt</code>). There was almost nothing to do since <code>ocamlopt</code> is a bytecode program.</li>
+<li>Installing packages with <code>opam</code> is possible again but the fix is very ugly (<code>ln -s ocamlc ocamlc.opt</code>). <code>opam</code> doesn't seem to support bytecode-only installations.</li>
+</ul>
+<h3 id="week-26">Week 26</h3>
+<h4 id="romain-calascibetta-7">Romain Calascibetta</h4>
+<ul>
+<li>I continue to improve the interface of MrMime</li>
+<li>I succeed to use the interface of david (it's the same of angstorm project) - now, the user can produce its parser</li>
+<li>I find some littles regressions with my big test (my 2000 emails) - I will fix that</li>
+<li>We can use the bigstring instead the string module now (so, possibly, we can improve the performance - but I need some tests about that)</li>
+<li>I continue to documente the project and after we can have a release of MrMime</li>
+<li>For this week, I will work on Decompress (as Richard advise me) about the performance, I already a PoC from zlib so I will test it.</li>
+<li>I think I continue to work the morning on MrMime (because is just some fixes) and after I work on Decompress.</li>
+</ul>
+<h4 id="philip-dexter-3">Philip Dexter</h4>
+<p>Our perforation system is ready for initial testing so this week I've mostly worked on running experiments. I translated a swaptions program into OCaml. A lot of time was spent fixing bugs in the translation but once everything was set up I ran it through our loop perforation system and have some initial results.</p>
+<p>We haven't quite reproduced the results from the C perforation system in the paper I'm referring to. They show results where a 5x speedup is achieved with only a 1% loss in accuracy. Our system can only produce a 1.2x speedup while losing 5% accuracy. We can get to 2x speedup but we have to sacrifice 40% accuracy. We do not perform the same state space searching as the paper version does so when that is all set up we may be able to reproduce the results.</p>
+<p>I'm confident that once we perform the same sort of searches as the C version we can gain similar speedups. This will be an immediate goal of next week.</p>
+<h4 id="olivier-nicole-11">Olivier Nicole</h4>
+<ul>
+<li>Vast changes in the way dependencies of static code are loaded: although <code>.cmm</code> files are still automatically loaded from the include path (<code>-I</code>), <code>.cmo</code> and <code>.cma</code> dependencies of static code must now be specified using the <code>-m</code> command-line flag. Since dependencies of dependencies must be specified as well, it can lead to rather large compilation commands. This is intended as a backward-compatibility feature, since hopefully dependency management in OCaml should soon evolve to loading <code>.cmo</code> files from path during linking, if Leo White's proposal for that gets accepted.</li>
+</ul>
+<p>The changes made to dependency loading involved a bootstrap of the compiler, and a modification of the stdlib makefile (and 3 days of very painful debugging because of a line that hadn't been removed). * A rebase on <code>trunk</code> was performed to avoind falling behind, but some work is necessary to get the native compiler running again (without trying to make it support macros yet) before the testsuite can be run. * Static and runtime declarations can now be interleaved in the REPL. To achieve this, the symbol table used for linking now carries phase information (i.e. the symtable is now mapping (identifier, phase) pairs to positions in the global data array). * Cross-stage identifiers may now be quoted inside toplevel splices. To do that, it was necessary to make the typechecker track the top-levelness of the current environment, but also to propagate upwards the set of cross-stage identifiers encountered in the environment. The only missing form of cross-stage persistence (CSP) left to implement is <em>path closures</em>. * Redaction of a report about macros to motivate a second, 6-month internship, starting in September.</p>
+<h3 id="week-25">Week 25</h3>
+<h4 id="romain-calascibetta-8">Romain Calascibetta</h4>
+<ul>
+<li>I continue to optimize MrMime and I will use the Bigstring (which is more faster than the String module) with my RingBuffer</li>
+<li>I finished to implement the interface (recommended by david) of my parser combinator (it is the same interface as the angstorm library from seliopou but with a different backend - as you know I use a ring-buffer)</li>
+<li>So I continue the large background work on MrMime and keep the stability (and avoid any regression) with my unit tests. So, nothing impressive but needed to concurrent any other implementation of email :)</li>
+</ul>
+<h4 id="philip-dexter-4">Philip Dexter</h4>
+<p>Our perforation system allows programmers to annotate looping constructs which they believe can benefit from perforation. Compiling an annotated program into an optimized program which uses loop perforation is not straghtforward.</p>
+<p>The most difficult task of this system is in finding the optimal perforation configuration. One solution is to profile every possible permutation of configurations. As this is entirely unfeasible the most truly difficult task is finding a heuristic which allows us to prioritize configurations.</p>
+<p>After running some subset of all configurations, there will be a smaller subset of optimal configurations which form a time-error tradeoff curve. Our end result would present this graph to the user, allowing them to choose which tradeoff works best for them.</p>
+<p>My time this week has been split between converting a black--scholes C implementation to OCaml and a first draft of our perforation program. The perforation program can successfully run different perforation configurations however there are no heuristics involved yet.</p>
+<h3 id="week-24">Week 24</h3>
+<h4 id="romain-calascibetta-9">Romain Calascibetta</h4>
+<p>I did some technical updates in MrMime:<br />
+* First, I added an abstraction about the operating system (Windows and Unix) * I reorganized the project to produce a good low-level API to manipulate an email * I finished, as you know, the encoder (and I can produce an email now) * I optimized the Base64 and the QuotedPrintable decoder (with tailcall optimization) * I finished the pretty-printing of an email * I fixed some little bugs between the encoder and the decoder * And I added the support of UTF-8 with the uutfsoftware by daniel - now, I have only 3 errors with 2000 mails (so ~0.15% fails - so MrMime is more resilient) * I talked with Daniel about the API and the support of UTF-8 (because an email can have many encoding data) and the main thing is to normalize the email on one encoding, the UTF-8. But, for that, I need another software to normalize any encoding to UTF-8 (daniel told me who will do) * May be, the next week, I will start the SMTP protocol with the unikernel</p>
+<h4 id="philip-dexter-5">Philip Dexter</h4>
+<p>A user cannot zealously apply approximate computing strategies to every line of every program they write. This week I have looked through three OCaml programs which I believe can benefit from approximation: 1. A ray tracer 2. A H.261 video decoder 3. The black--scholes algorithm for option pricing</p>
+<p>Not all three programs have explicit for-loops---OCaml programmers tend to favor recursion---but all three have perforation opportunity.</p>
+<p>My next step is to implement an interactive system which will guide a user in approximating their programs. It will first identify all potential loops/recursive calls in a program which allow perforation. Given this set it will then attempt to find the /best/ combination of perforation. Testing all possible combinations of loop perforation is unfeasible so some heuristics must be developed.</p>
+<p>I also spent some time this week working on multicore OCaml. I wet my feet by writing a recursive lock implementation. The code can be found on [github] along with the [issue] requesting the implementation.</p>
+<p><a href="https://github.com/ocamllabs/reagents/compare/master...philipdexter:recursive">github</a></p>
+<p><a href="https://github.com/ocamllabs/reagents/issues/2">issue</a></p>
+<h4 id="olivier-nicole-12">Olivier Nicole</h4>
+<ul>
+<li>I finally implemented support of static components in coercions. Now, module interfaces can be fully constrained (not only a subset consisting only of runtime values).</li>
+<li>As a necessary condition for that change, the code duplication between <code>Translmod</code> and <code>Translstatic</code> was reduced to a minimum. Now, all <code>Translstatic</code> does is create the necessary lambda code to run splices.</li>
+<li>When trying to use external static code in REPL, I realized that the it couldn't work because of the coexistence of ambiguous identifiers in the symbol table (e.g. <code>Expr</code> may be bound to the runtime part of the <code>Expr</code> module used in runtime code, or the static part of that module used in static code, a problem that doesn't arise in <code>ocamlc</code> since only the static parts are run). I am currently working on adding phase information to the symbol table to resolve these ambiguities.</li>
+</ul>
+<h3 id="week-23">Week 23</h3>
+<h4 id="romain-calascibetta-10">Romain Calascibetta</h4>
+<ul>
+<li>So I focused this week on my abstract for the ICFP (so Richard corrected the paper and I have sent Friday)</li>
+<li>I continue to implement the pretty-printer of MrMime (I implemented without regresssion with my unit test)</li>
+<li>I start to look S/MIME (secure mail) - so may be I will implement with ocaml-tls the secure mail one time</li>
+</ul>
+<h4 id="philip-dexter-6">Philip Dexter</h4>
+<p>My work this summer is about providing approximate programming tools for OCaml programmers. There are several different styles of approximate computing; each requires of their users different technical knowledge of the subject.</p>
+<p>As one example, loop perforation is an approximate computing technique where iterations of a loop are skipped in the pursuit of reducing resource usage (be it time or energy). A loop perforation build system will generally have a self tuning step where, given test input and a fitness function from the user, the system can automatically deduce an approximation strategy. Further refinement by the user is indeed an option, but this is a good example of a technique which asks little of its user.</p>
+<p>Loop perforation's ease of use leads KC and I to believe that adding a loop perforation system in OCaml is a great first step in the broader plan of supplying a goodie bag of approximation tools.</p>
+<p>I have written a ppx extension for loop perforation. It is basic. In writing it I have both learned a lot about ppx extensions and expanded my compiler knowledge. The next steps are to decide whether to implement a self tuning system. If yes: the ppx extension and the self tuning system would make for a decent first release of an approximation system for OCaml. If no: there are other techniques for approximate computing that we can play with before we decide where to spend coding efforts.</p>
+<p>We have met with a group in the lab which is interested in prolonging the flight time of their drone operations. It is hard to say whether there is a collaboration opportunity; approximate computing is not always the right tool for the job.</p>
+<h4 id="enguerrand-decorne-1">Enguerrand Decorne</h4>
+<ul>
+<li>My first step is to take <span class="citation" data-cites="yallop">@yallop</span> script to generate ctypes bindings and make it generate some OCaml parse tree instead of generating OCaml sources so I try to find some ways of integrating it easily in a Reason/OCaml flow. One of the goal would be trying to avoid as much as possible fighting with a build system</li>
+<li>I also took some time to finish a Reason js_of_ocaml REPL I started some months ago. We will probably communicate about it soon publicly, but for now it’s available there: https://engil.github.io/reason-web-toplevel/</li>
+</ul>
+<h4 id="olivier-nicole-13">Olivier Nicole</h4>
+<ul>
+<li>The integration of Leo White's quoting library, as well as the implementation of top-level splicing, were completed. As a consequence, it is now possible to compile programs containing macros as long as CSP is not needed (except CSP for global identifiers which comes for free), for example:</li>
+</ul>
+<pre><code>  open ^Pervasives
+  static rec power&#39; n x =
+    if n = 0 then
+      &lt;&lt; 1 &gt;&gt;
+    else if n mod 2 = 0 then
+      let y = power&#39; (n/2) x in
+      &lt;&lt; let z = $y in Pervasives.( * ) z z &gt;&gt;
+    else
+      &lt;&lt; Pervasives.( * ) $x $(power&#39; (pred n) x) &gt;&gt;
+
+  (* val power&#39; : int -&gt; int expr -&gt; int expr = &lt;fun&gt; *)
+  static power n =
+    &lt;&lt; fun x -&gt; $(power&#39; n &lt;&lt;x&gt;&gt;) &gt;&gt;
+  (* val power : int -&gt; (int -&gt; int) expr = &lt;fun&gt; *)
+  let power_five = $(power 5)
+  (* val power_five : int -&gt; int = &lt;fun&gt; *)</code></pre>
+<ul>
+<li>Execution of static bindings and splices was implemented in the REPL. Declaring modules with static components in the REPL is not supported for now.</li>
+<li>The <code>Expr</code> module, for phase-invariant <code>'a -&gt; 'a expr</code> conversions, was added. Using this module it is for instance possible to write the following function:</li>
+</ul>
+<pre><code>  static rec range = function
+    | 0 -&gt; &lt;&lt; [] &gt;&gt;
+    | n -&gt; &lt;&lt; $(^Expr.of_int n) :: $(range (^Pervasives.pred n)) &gt;&gt;</code></pre>
+<ul>
+<li>The tracking of stage (defined as the number of surrounding quotes, minus the number of non-top-level splices) was implemented. It makes it possible to tell whether a identifier in a quote will be usable at the splicing point or whether some form of CSP is needed. Since CSP is not implemented at the moment, when encountering a (non-global) identifier of the wrong stage a type error is thrown. (Type errors don't abruptly stop the program but show pretty-printed errors with the location of the problem).</li>
+</ul>
+<h3 id="week-22">Week 22</h3>
+<h4 id="romain-calascibetta-11">Romain Calascibetta</h4>
+<ul>
+<li>I optimized the Base64 decoder but MrMime is slow with QuotedPrintable (but I have an idea to fix that)</li>
+<li>MrMime is more resilient with bad email (like an email without Fromand Dateinformation)</li>
+<li>I fixed some little bug (infinite loop, order of meta-data, multipart inception, unstructured data, and raised exception)</li>
+<li>I retrieved a regression with my test (so, I have a good tests suite) and I fixed this regression - it's a specific problem with a wrong example from the standard RFC 822</li>
+<li>I started the implementation of pretty-printing, so I continue the prototype (I am inspired by the Format module from OCaml standard lib to respect the 80 characters rules)</li>
+<li>I will use an archive from the caml-list (from daniel) to have a good tests suit about the parsing of email (it's a huge example about the old/bad emails)</li>
+<li>So this week, it's just some fixes and a minimal prototype about the pretty-printing :s</li>
+</ul>
+<h4 id="olivier-nicole-14">Olivier Nicole</h4>
+<ul>
+<li>Phase mismatch is now detected in signatures (i.e. the compiler will complain if you try to match a <code>static val</code> and a <code>val</code>).</li>
+<li>We are now focusing on quoting and splicing. The splicing part involved quite a lot of refactoring in <code>Translstatic</code>: <code>Translstatic</code> used to translate an implementation file into a lambda creating the module and adding a reference to it in the symtable. Now the lambda generated by <code>Translstatic</code> not only creates the module but also returns an array of untyped ASTs, corresponding to all the splicings of code into phase zero (i.e. splicings that are not inside a quotation).</li>
+<li>In a new module <code>Runstatic</code>, this static lambda code is run and the splicings are actually reified. They are then used by <code>Translcore</code> to &quot;fill&quot; phase-zero splicings every time it encounters one. This approach is implemented and compiles, but not yet thoroughly tested, since to test splicing something has to be quoted, and the quoting library is not integrated into the compiler yet.</li>
+<li>Finally, I started working on integrating the quoting library written by Leo White. The main function <code>Translquote.quote_expression</code>, takes a typed tree and returns the lambda code that will generate the isomorphic <em>untyped</em> tree at run-time (well, at static run-time). This work is still going on.</li>
+</ul>
+<p>Limitations:<br />
+* As stated above splicing is untested for now. * Because I didn't know whether I should reimplement some parts of <code>Translmod</code> in <code>Translstatic</code>, module coercions are still not handled by <code>Translstatic</code>. So for now, coercing static components of a <code>.ml</code> using a <code>.mli</code> won't work — the fix is easy but I'm focusing on quoting for now.</p>
+<h3 id="week-21">Week 21</h3>
+<h4 id="romain-calascibetta-12">Romain Calascibetta</h4>
+<ul>
+<li>I updated MrMime with a new program maildir. You can execute this program with ./maildir -p /path/to/your/mails/ -n LFif the newline of your email is LF character (and it's probably your case with mac osx). I retrieve two difficulties about the parsing:</li>
+<li>The difficulty to predict the end of the email - so may be you catch an infinite loop when you scan your emails</li>
+<li>The latency with Base64 and QuotedPrintable decoder (because, for each character, we need to try the boundary parser to stop the decoder)</li>
+<li>So you can use the project on two way. The first way is to use maildirbinary. But if you catch a infinite loop for example (or a weird exception), you can try with a specific email with utop -init test.ml(the second way). At this moment, you can compile the project with debug information (with ./configure --enable-trace and make install) and see where MrMime fails. The parsing is resilient with the malformed header. So now, I will implement the pretty-printing of email and prove if the parsing and pretty-printing is bijective (just to be on the safe side).</li>
+</ul>
+<p>(you need to configure the project with --enable-teststo get the maildirbinary)</p>
+<h4 id="olivier-nicole-15">Olivier Nicole</h4>
+<ul>
+<li>Support for loading static components of external modules was added. This implied compiling the static part of modules to <code>.cmm</code> files.</li>
+<li>When using lifted versions of standard modules (e.g. <code>Printf</code>), the compiler would load the corresponding <code>.cmo</code> file. The problem is that standard modules are already present in the bytecode of <code>ocamlc</code> itself, so lifted standard modules were, in a way, loaded twice. In addition of being useless, this second loading would cause problems with side effects implying buffering (e.g. when using <code>Printf.printf</code>, the ordering of outputs was wrong). This was fixed by adding a function <code>Symtable.init_static ()</code> that simply calls <code>init_toplevel ()</code> and then adds the lifted version of every global identifier (pointing to the same position in the bytecode) directly into the symtable. This way, standard modules are not loaded twice, and their use no longer involves reading an external <code>.cmo</code> file.</li>
+<li>At that point the produced lambda code was highly unsafe to use because it pointed to runtime and static fields of external modules as though they were in a same record, which could lead to wrong indexes and segfaults. This was fixed for now by adding 0 as a placeholder for non-static (resp.non-runtime) components in <code>.cmm</code> (resp. <code>.cmo</code>) files. A more sophisticated way might be necessary in the long term.</li>
+</ul>
+<p>Limitations:<br />
+* Constrained internal modules (i.e. <code>module M : sig ... end = struct...</code>) is not supported by <code>Translstatic</code> yet. Nor are functors. These constructions are translated as the unit lambda. * <code>Includemod</code> is still phase-agnostic, so interface mismatches involving values with the right name and the wrong phase will not be detected.</p>
+<h3 id="week-20">Week 20</h3>
+<h4 id="romain-calascibetta-13">Romain Calascibetta</h4>
+<ul>
+<li>I fixed some little bug with MrMime and the &quot;real world&quot; email</li>
+<li>Firstly, I use a script with fetchmail program to download my email</li>
+<li>But, I implemented a library to communicate with my GMail (with the POP3 protocol), you can see the project: https://github.com/oklm-wsh/Jackson (it's a little project, and it just a prototype to test MrMime)</li>
+<li>So I continue to fix MrMime with the real world and automatize the test suite</li>
+<li>At the same time, I look sessions type and GADT in OCaml to create a tool to describe a protocol (like POP3 or SMTP) with GADT (so a typed protocol), may be if I have a good result with GADT (because it's very complex), I use that for Jackson and for the implementation of SMTP</li>
+<li>So not specifically productive but, step by step, I have a little prototype to communicate with GMail (or another service) and a resilient implementation of email</li>
+</ul>
+<h4 id="enguerrand-decorne-2">Enguerrand Decorne</h4>
+<ul>
+<li>TLS: Halfway through the binding implementation, the configuration parsing from libtls is now working for ocaml-tls, only things left is writing and reading on sockets and the binding will be complete.</li>
+</ul>
+<h4 id="olivier-nicole-16">Olivier Nicole</h4>
+<ul>
+<li>Module lifting was implemented, i.e. external modules may now be used in static code by simply adding a caret (<code>^</code>) to their names, e.g.:</li>
+</ul>
+<p>Lifting of module defined inside the compilation unit (via <code>module M = struct... end</code>) is not supported, as the definition of such modules may depend on values that are only known at runtime. For this reason, only external, compiled modules can be lifted. * Support for accessing static values of internal modules was added, i.e. the following compiles and prints what is expected:</p>
+<p>``` module M = struct open ^Pervasives</p>
+<pre><code>static rec take n = function
+  | [] -&gt; []
+  | x :: xs -&gt; if n &gt; 0 then x :: take (n-1) xs else []
+
+module N = struct
+  static rec l = &quot;0&quot; :: l&#39;
+         and l&#39; = &quot;1&quot; :: l
+end</code></pre>
+<p>end</p>
+<p>open ^Pervasives</p>
+<p>static () = print_endline @@ ^String.concat &quot;&quot; @@ M.take 10 M.N.l ```</p>
+<p>Limitations:<br />
+* Static value description in signatures (i.e. <code>static val x : some_type</code>) are supported by the parser, but not handled by the typechecker for now, as it implies modifying <code>Includemod</code>. Handling static components in signatures will be necessary for the next step, that is, saving and loading static code from/to external files.</p>
+<h3 id="week-19">Week 19</h3>
+<h4 id="romain-calascibetta-14">Romain Calascibetta</h4>
+<ul>
+<li>As you know, I released Syndic 1.5 with ptime to compile in MirageOS. Hannes merged this change in Canopy</li>
+<li>I optimized Decompress and I won 4 MB/s in Inflate</li>
+<li>Jeremy Yallop send me a snippet for Decompress to win 2 MB/s (I didn't try this snippet yet but it is my TODO)</li>
+<li>I came back to MrMime and fixed little bug in multipart parsing</li>
+<li>I reorganized MrMime to have a better interface</li>
+<li>I tried to use ocaml-imap to communicate with my GMail and it's work fine</li>
+<li>But I'm focussing on the test of parsing now so I think the next, I will do just a many test to prove the maturity of MrMime (I already started)</li>
+<li>May be I cook some cookies tomorrow for Monday :)</li>
+</ul>
+<h4 id="enguerrand-decorne-3">Enguerrand Decorne</h4>
+<ul>
+<li>TLS: Implemented a few simple clients and servers using various C TLS libraries (libtls, mbedtls) to understand their API. Started to implement the binding trying to replicate libtls's interface.</li>
+<li>Various things on Canopy (bugfixes)</li>
+<li>Spent some time playing with Reason (reading the doc, tried to implement a web toplevel for Reason using js_of_ocaml), tried to debug an issue with ocaml-git</li>
+</ul>
+<h4 id="olivier-nicole-17">Olivier Nicole</h4>
+<ul>
+<li>I implemented the <code>static</code> keyword; all right-hand sides of static bindings will be executed during compilation. So:</li>
+</ul>
+<pre><code>  static msg = &quot;Hello&quot;
+  static () = print_endline msg
+  let () = print_endline &quot;runtime!&quot;</code></pre>
+<p>will print &quot;Hello&quot; during compilation and &quot;runtime!&quot; when it's run. I only implemented this feature in the bytecode compiler as we decided to focus on it for now.</p>
+<p>At that point though, sharing static and runtime values is not explicitely forbidden. So the following program:</p>
+<pre><code>  let msg = &quot;let-bound&quot;
+  static () = print_endline msg</code></pre>
+<p>would make the compiler crash with a non-informative error message. * To address that, I split the environment into a static and a runtime part. So the above program would now be rejected with an &quot;Unbound variable&quot; message. That's not very informative either, but a more explicit staging error should be easy to implement later. * Currently, static bindings cannot refer to other modules than the one being compiled. So the program:</p>
+<pre><code>  static () = print_endline A.msg</code></pre>
+<p>fails with the error &quot;Undefined global A&quot;, even if the files <code>a.cmi</code> and <code>a.cmo</code> are in the include path. The only exception to this are the stdlib modules (such as <code>Printf</code> and <code>Pervasives</code>), because their bytecode is contained in the ocamlc program. So there needs to be a way to use non-standard modules in static code.</p>
+<p>It appears that this triggers not only implementation question, but design issues. For example values from non-static modules should not be usable in static code, but the types exported by these modules should, otherwise lots of useful macros would be ill-formed. For example, when performing a quote:</p>
+<pre><code>  module M = struct
+    type t = T
+    let x = T
+  end
+
+  macro m () = (&lt;&lt; M.x &gt;&gt; : M.t expr)</code></pre>
+<p>This very simple macro would be rejected if types weren't shared across stages. So there needs to be a distinct treatment between types and values.</p>
+<ul>
+<li>Finally, the use of lifted modules (i.e. modules exporting non-static values that are used in static code of another module) raises lots of questions, as there can be two versions of a module in the same code: a lifted version and a non-lifted version, as in:</li>
+</ul>
+<pre><code>  static module M = struct
+    type t = T
+    let x = T
+  end
+
+  module M = struct
+    type t = S
+    let x = S
+  end
+
+  static foo = (M.x : M.t)</code></pre>
+<p>In <code>M.x : M.t</code>, <code>M.x</code> refers to the static module, but to which module does <code>M.t</code> refer? Since types are shared across stages, this is ambiguous. There are lot of examples where referring to lifted and non-lifted modules using the same name is a problem. I don't fully understand all these examples yet. ^^</p>
+<p>That's why Leo White came up with the proposition to make lifting syntactically explicit. For example, the lifted version of a module <code>Foo</code> would be <code>^Foo</code>.</p>
+<p>On the implementation level, this implies to come back on a few changes made previously to the compiler, but it should eventually make implementation easier.</p>
+<h3 id="week-17">Week 17</h3>
+<h4 id="romain-calascibetta-15">Romain Calascibetta</h4>
+<ul>
+<li>I fixed some bug with parsing of email and header</li>
+<li>I implemented the RFC 5321 (to have a literal domain in an email) and use Ipaddr library for this part</li>
+<li>I implemented the validator website (http://oklm-wsh.github.io/Validator/validator.html) with some tests of email</li>
+<li>I implemented the header fields from RFC 2045</li>
+<li>I attacked the implementation of RFC 2046 (a multipart email)</li>
+<li>I implemented a PPX to inject an IANA database in MrMime project (and I talked about that with Rudy for an integrate of that in Cohttp maybe)</li>
+</ul>
+<p>I talked with Richard Mortier and I think I will avoid the implementation of RFC 3798 (to permit a long parameter in a Content-Type field) and move fast to the implementation in a unikernel when I finish the multipart. So I think it is the last last RFC (to much RFC ...).</p>
+<h4 id="enguerrand-decorne-4">Enguerrand Decorne</h4>
+<ul>
+<li>ocaml-tls binding: Separating handling of IOs from the OCaml code: now the C program must handle all IOs (networking, file reading)…</li>
+<li>As of friday this is mostly finished and the handshake from a simple C TLS client is working.</li>
+<li>A working prototype of the binding is to expect by the end of next week.</li>
+<li>Worked on Canopy: Improved CSS, various bugfixes and PR reviews</li>
+</ul>
+<h3 id="week-16">Week 16</h3>
+<h4 id="romain-calascibetta-16">Romain Calascibetta</h4>
+<ul>
+<li>A robust implementation of email (I check with a complete suit test from another implementation in PHP and JavaScript)</li>
+<li>A robust implementation of meta-data of email (the header of email), it's compliant with old and new standard - 822, 2822 and 5322)</li>
+<li>A beginning implementation of multipart email (I implemented Base64 and QuotedPrintable compute for encoded data)</li>
+<li>Implementation of inline encoded data (compliant with the standard 2047)</li>
+</ul>
+<p>You can see all at: <a href="https://github.com/oklm-wsh/MrMime" class="uri">https://github.com/oklm-wsh/MrMime</a></p>
+</body>
+</html>
